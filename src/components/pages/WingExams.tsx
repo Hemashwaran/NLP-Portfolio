@@ -42,7 +42,7 @@ export const WingExams: React.FC<WingExamsProps> = ({ period }) => {
           </div>
 
           <p className="text-sm text-chalk/80 leading-relaxed mb-6">
-            In many courses, exams reward rote memorization of slide bullet points. [MAM'S NAME]'s CAT 2 paper was deliberately crafted to reward students who followed classroom discussions and practiced drawing state machines with a pencil.
+            In many courses, exams reward rote memorization of slide bullet points. Dr. SHARMILA BANU K mam's CAT 2 paper was deliberately crafted to reward students who followed classroom discussions and practiced drawing state machines with a pencil.
           </p>
 
           {/* Unfolding Exam Paper Visual */}
@@ -153,7 +153,7 @@ export const WingExams: React.FC<WingExamsProps> = ({ period }) => {
               Comprehensive NLP Practice Quiz (8 Questions)
             </span>
             <span className="text-xs font-mono font-bold text-chalk-green">
-              {submitted ? `Score: ${calculatedScore} / 8 (${((calculatedScore/8)*100).toFixed(0)}%)` : `${Object.keys(answers).length} of 8 answered`}
+              {submitted ? `Score: ${calculatedScore} / 8 (${((calculatedScore / 8) * 100).toFixed(0)}%)` : `${Object.keys(answers).length} of 8 answered`}
             </span>
           </div>
 

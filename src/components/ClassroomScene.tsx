@@ -47,13 +47,11 @@ export const ClassroomScene: React.FC<ClassroomSceneProps> = ({
   };
 
   return (
-    <div className={`relative w-full h-full min-h-[580px] lg:min-h-[640px] rounded-2xl overflow-hidden border border-chalk/20 shadow-2xl transition-colors duration-500 select-none ${
-      isEvening ? 'bg-[#0f1715]' : 'bg-[#1a2522]'
-    }`}>
+    <div className={`relative w-full h-full min-h-[580px] lg:min-h-[640px] rounded-2xl overflow-hidden border border-chalk/20 shadow-2xl transition-colors duration-500 select-none ${isEvening ? 'bg-[#0f1715]' : 'bg-[#1a2522]'
+      }`}>
       {/* Ambient Lighting Overlay */}
-      <div className={`absolute inset-0 pointer-events-none transition-opacity duration-700 ${
-        isEvening ? 'opacity-40 bg-blue-950/40 mix-blend-multiply' : 'opacity-10 bg-amber-500/10'
-      }`} />
+      <div className={`absolute inset-0 pointer-events-none transition-opacity duration-700 ${isEvening ? 'opacity-40 bg-blue-950/40 mix-blend-multiply' : 'opacity-10 bg-amber-500/10'
+        }`} />
 
       {/* Classroom Wall & Board Illustration (SVG) */}
       <svg
@@ -206,10 +204,10 @@ export const ClassroomScene: React.FC<ClassroomSceneProps> = ({
         <line x1="390" y1="145" x2="810" y2="145" stroke="#f2b84b" strokeWidth="2.5" strokeDasharray="6 3" opacity="0.85" />
 
         <text x="600" y="180" textAnchor="middle" fill="#dcd7cc" fontSize="19" fontFamily="'Patrick Hand', cursive">
-          CSE3002 · Technology Tower · VIT Vellore
+          CSE3002 · prp · VIT Vellore
         </text>
         <text x="600" y="215" textAnchor="middle" fill="#99d98c" fontSize="16" fontFamily="'DM Sans', sans-serif">
-          Faculty: [MAM'S NAME] · 30 Periods · 8 Wings
+          Faculty: Dr. SHARMILA BANU K mam · 30 Periods · 8 Wings
         </text>
 
         {/* Chalk Tray at Board Bottom */}
@@ -284,7 +282,7 @@ export const ClassroomScene: React.FC<ClassroomSceneProps> = ({
           {/* Student 1 (left) */}
           <ellipse cx="360" cy="460" rx="28" ry="32" fill="#182321" />
           <path d="M 315 540 C 315 485 405 485 405 540 Z" fill="#182321" />
-          
+
           {/* Student 2 (center, raising hand gently!) */}
           <ellipse cx="610" cy="455" rx="30" ry="34" fill="#141c1a" />
           <path d="M 560 540 C 560 480 660 480 660 540 Z" fill="#141c1a" />
@@ -397,7 +395,7 @@ export const ClassroomScene: React.FC<ClassroomSceneProps> = ({
           <Clock className="w-3.5 h-3.5 text-gold" />
           <span className="font-mono">{timeStr}</span>
           <span className="text-chalk/40">|</span>
-          <span className="text-[11px] text-chalk/80">TT 3rd Floor</span>
+          <span className="text-[11px] text-chalk/80">prp Floor</span>
         </div>
 
         <button

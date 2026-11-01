@@ -72,21 +72,19 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
             <div className="flex justify-center gap-4 pt-2">
               <button
                 onClick={() => setSelectedStarGroup('questions')}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all border ${
-                  selectedStarGroup === 'questions'
+                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all border ${selectedStarGroup === 'questions'
                     ? 'bg-gold text-wood-dark border-gold shadow'
                     : 'bg-black/30 text-chalk/80 border-chalk/10'
-                }`}
+                  }`}
               >
                 ★★ Stars 1 & 2: Classroom Questions (Week 4)
               </button>
               <button
                 onClick={() => setSelectedStarGroup('project')}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all border ${
-                  selectedStarGroup === 'project'
+                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all border ${selectedStarGroup === 'project'
                     ? 'bg-gold text-wood-dark border-gold shadow'
                     : 'bg-black/30 text-chalk/80 border-chalk/10'
-                }`}
+                  }`}
               >
                 ★★★ Stars 3, 4 & 5: Project Topic Pitch (Week 8)
               </button>
@@ -97,10 +95,10 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
           {selectedStarGroup === 'questions' ? (
             <div className="p-5 rounded-xl bg-chalkboard-dark border border-gold/30 space-y-2 animate-in fade-in">
               <span className="text-xs font-mono font-bold text-gold uppercase tracking-wider block">
-                Story 1: Defending Polysemy & Sarcasm Heuristics
+                Story 1: Answering questions
               </span>
               <p className="text-xs sm:text-sm text-chalk/90 leading-relaxed">
-                During a lively debate on lexical ambiguity, the class argued over whether five context words were sufficient to disambiguate sentiment in student commentary. I walked up to the board and demonstrated an adversarial example where sarcastic phrasing inverted polarity despite positive unigrams. Mam smiled, drew two stars next to my name, and told the class: "That is how an NLP engineer looks at language!"
+                "During class I answered 2 questions asked by mam"
               </p>
             </div>
           ) : (
@@ -109,7 +107,7 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
                 Story 2: Pitching Outbreak Radar to the Class
               </span>
               <p className="text-xs sm:text-sm text-chalk/90 leading-relaxed">
-                When presenting project ideas, many teams suggested basic movie review sentiment classifiers. I proposed connecting localized regional news NER with inter-district public bus timetables during the Nipah fever alert in Kerala. Showing how NLP could detect geographic transmission corridors before official bulletins earned a 3-star commendation from mam right from the podium!
+                When presenting project ideas, many teams suggested different ideas. I proposed connecting localized regional news NER with inter-district public bus timetables during the Nipah fever alert in Kerala. Showing how NLP could detect geographic transmission corridors before official bulletins earned a 3-star commendation from mam!
               </p>
             </div>
           )}

@@ -4,7 +4,7 @@ import path from 'path';
 const contentFile = path.resolve('src/data/content.ts');
 const text = fs.readFileSync(contentFile, 'utf8');
 
-// Match any placeholder in brackets like [MY NAME], [CONFIRM...], [VERIFY...], [PLACEHOLDER]
+// Match any placeholder in brackets like K.Hemashwaran, [CONFIRM...], [VERIFY...], [PLACEHOLDER]
 const placeholderRegex = /\[(MY [A-Z\s]+|REG NO|PROGRAMME[A-Z,\s]*|MAM'S NAME|SEM|LAB \d|CONFIRM[^\]]*|REVIEW BY NATIVE SPEAKER|VERIFY MY ANSWER|WHICH QUESTION|DATES|PLACEHOLDER[^\]]*)\]/g;
 
 const matches = [];

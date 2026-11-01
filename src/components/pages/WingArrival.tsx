@@ -32,14 +32,14 @@ export const WingArrival: React.FC<WingArrivalProps> = ({
             <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-gold/20 text-gold border border-gold/30">
               Period 1 · Seat 24
             </span>
-            <span className="text-xs text-chalk/60 font-sans">Technology Tower, Row 3</span>
+            <span className="text-xs text-chalk/60 font-sans">prp, Row 3</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-bold font-chalk text-chalk mb-2">
             Taking My Seat in Row 3
           </h2>
           <p className="text-chalk/80 leading-relaxed font-sans mb-4">
-            Welcome to my desk. In front of you is our green chalkboard with <em>Natural Language Processing</em> fresh in chalk. This portfolio documents my 30-period journey at VIT Vellore under <PlaceholderBadge label="[MAM'S NAME]" hint="Faculty Name" />.
+            Welcome to my desk. In front of you is our green chalkboard with <em>Natural Language Processing</em> fresh in chalk. This portfolio documents my 30-period journey at VIT Vellore under <PlaceholderBadge label="Dr. SHARMILA BANU K mam" hint="Faculty Name" />.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">

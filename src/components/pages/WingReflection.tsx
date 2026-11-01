@@ -15,31 +15,31 @@ export const WingReflection: React.FC<WingReflectionProps> = ({ period, onReturn
   const timelineMilestones = [
     {
       week: "Week 1",
-      datePlaceholder: "[DATE: JAN 08]",
+      datePlaceholder: "",
       title: "First Lecture: Ambiguity in Human Language",
-      desc: "Stepping into TT 3rd floor. Mam framed NLP not as formula memorization, but as solving linguistic ambiguity across Indian contexts."
+      desc: "Stepping into prp floor. Mam framed NLP not as formula memorization, but as solving linguistic ambiguity across Indian contexts."
     },
     {
       week: "Week 3",
-      datePlaceholder: "[DATE: JAN 22]",
+      datePlaceholder: "",
       title: "Hands-on Jupyter: Tokenization & Regex",
       desc: "Building custom tokenizers on actual student query circulars. Overcoming broken contractions and emoji tokens."
     },
     {
       week: "Week 5",
-      datePlaceholder: "[DATE: FEB 05]",
+      datePlaceholder: "",
       title: "The Derivational Morphology Challenge",
       desc: "Dissecting roots and derivational affixes. Writing state machines from q0 to q11 on the chalkboard."
     },
     {
       week: "Week 8",
-      datePlaceholder: "[DATE: FEB 26]",
+      datePlaceholder: "",
       title: "Project Pitch: Campus Connect & Radar",
       desc: "Presenting our multilingual campus guide and our outbreak transmission concept. Earned our 5 classroom stars!"
     },
     {
       week: "Week 11",
-      datePlaceholder: "[DATE: MAR 19]",
+      datePlaceholder: "",
       title: "CAT 2 Exam: Derivational FSA Solution",
       desc: "Solving the 10-mark FSA alteration question with augmented transitions, receiving mam's handwritten green 'Good!' remark."
     }
@@ -114,10 +114,10 @@ export const WingReflection: React.FC<WingReflectionProps> = ({ period, onReturn
                 Period 29 · Student Reflection
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold font-chalk text-chalk mt-1">
-                Reflection & Heartfelt Letter to [MAM'S NAME]
+                Reflection & Heartfelt Letter to Dr. SHARMILA BANU K mam
               </h2>
             </div>
-            <PlaceholderBadge label="[MAM'S NAME]" field="Faculty Name" />
+            <PlaceholderBadge label="Dr. SHARMILA BANU K mam" field="Faculty Name" />
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">

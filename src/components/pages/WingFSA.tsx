@@ -122,7 +122,7 @@ export const WingFSA: React.FC<WingFSAProps> = ({ period }) => {
             </div>
             <div className="text-right">
               <span className="text-xl font-bold font-mono text-gold">5 × 2 = 10 Marks</span>
-              <span className="block text-[11px] text-chalk/60">Technology Tower Hall</span>
+              <span className="block text-[11px] text-chalk/60">prp Hall</span>
             </div>
           </div>
 
@@ -190,11 +190,10 @@ export const WingFSA: React.FC<WingFSAProps> = ({ period }) => {
               <button
                 key={w.id}
                 onClick={() => handleSelectWord(w.id)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold font-mono transition-all flex items-center gap-1.5 ${
-                  selectedWordId === w.id
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold font-mono transition-all flex items-center gap-1.5 ${selectedWordId === w.id
                     ? 'bg-gold text-wood-dark shadow-md scale-105'
                     : 'bg-black/40 text-chalk/80 hover:bg-black/60 border border-chalk/10'
-                }`}
+                  }`}
               >
                 <span>{w.id})</span>
                 <span>{w.word}</span>
@@ -351,11 +350,10 @@ export const WingFSA: React.FC<WingFSAProps> = ({ period }) => {
                 <div key={idx} className="flex items-center gap-2">
                   <div
                     onClick={() => setActiveStepIndex(idx)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-mono font-semibold cursor-pointer transition-all border ${
-                      idx <= activeStepIndex
+                    className={`px-3 py-1.5 rounded-lg text-xs font-mono font-semibold cursor-pointer transition-all border ${idx <= activeStepIndex
                         ? 'bg-gold/20 text-gold-light border-gold/50 shadow-sm'
                         : 'bg-black/30 text-chalk/40 border-chalk/10'
-                    }`}
+                      }`}
                   >
                     Step {idx + 1}: {step}
                   </div>
@@ -402,7 +400,7 @@ export const WingFSA: React.FC<WingFSAProps> = ({ period }) => {
               FSA Derivational Morphology Quiz
             </span>
             <span className="text-xs font-mono text-chalk-green font-bold">
-              {showResults ? `Score: ${score} / 5 (${((score/5)*100).toFixed(0)}%)` : `${Object.keys(quizAnswers).length} of 5 Answered`}
+              {showResults ? `Score: ${score} / 5 (${((score / 5) * 100).toFixed(0)}%)` : `${Object.keys(quizAnswers).length} of 5 Answered`}
             </span>
           </div>
 

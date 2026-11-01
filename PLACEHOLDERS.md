@@ -11,11 +11,11 @@ As per the course portfolio honesty rules:
 
 | Tag | Pages / Location | What You Must Supply |
 | :--- | :--- | :--- |
-| `[MY NAME]` | Pages 1, 2, 23, 29, 30 (`OWNER_DETAILS.name`) | Your full legal or preferred student name. |
-| `[REG NO]` | Pages 1, 2, 29, 30 (`OWNER_DETAILS.regNo`) | Your official VIT registration number (e.g., `23BCE10234`). |
+| `K.Hemashwaran` | Pages 1, 2, 23, 29, 30 (`OWNER_DETAILS.name`) | Your full legal or preferred student name. |
+| `23MID046` | Pages 1, 2, 29, 30 (`OWNER_DETAILS.regNo`) | Your official VIT registration number (e.g., `23BCE10234`). |
 | `[PROGRAMME, YEAR]` | Page 2 (`OWNER_DETAILS.programme`) | Your degree and year of study (e.g., `B.Tech CSE, 3rd Year`). |
-| `[MAM'S NAME]` | Pages 1, 2, 5, 8, 16, 23, 26, 29 (`OWNER_DETAILS.faculty`) | Your course faculty professor's name (e.g., `Dr. Jane Doe`). |
-| `[SEM]` | Page 2 (`OWNER_DETAILS.semester`) | The semester term (e.g., `Winter Semester 2025-2026`). |
+| `Dr. SHARMILA BANU K mam` | Pages 1, 2, 5, 8, 16, 23, 26, 29 (`OWNER_DETAILS.faculty`) | Your course faculty professor's name (e.g., `Dr. Jane Doe`). |
+| `7` | Page 2 (`OWNER_DETAILS.semester`) | The semester term (e.g., `Winter Semester 2025-2026`). |
 | `[MY LEVELS]` | Page 4 (About Me) | Self-assessed proficiency percentages for Python, Regex, Morphology, Multilingual, NER. |
 | `[CONFIRM which were discussed]` | Page 5 (Real Applications) | Confirm whether search autocorrect, epidemic news, rumour detection, and speech assistants were discussed in class. |
 | `[LAB 1]`, `[LAB 2]`, `[LAB 3]` | Page 6 (Jupyter Labs) | Your specific lab exercise numbers / titles from your practical record. |

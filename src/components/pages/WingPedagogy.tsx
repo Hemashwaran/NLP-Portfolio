@@ -196,7 +196,7 @@ spontaneousness -> spontaneous (via ness$)`,
             Learning Through Real Applications
           </h2>
           <p className="text-sm text-chalk/80 leading-relaxed mb-6">
-            <PlaceholderBadge label="[MAM'S NAME]" /> never taught theoretical formulas in isolation. Every concept was grounded in an application we interact with on our phones daily. Click any card below to flip between theory and its real-world engineering counterpart!
+            <PlaceholderBadge label="Dr. SHARMILA BANU K mam" /> never taught theoretical formulas in isolation. Every concept was grounded in an application we interact with on our phones daily. Click any card below to flip between theory and its real-world engineering counterpart!
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -206,11 +206,10 @@ spontaneousness -> spontaneous (via ness$)`,
                 <div
                   key={item.id}
                   onClick={() => toggleFlip(item.id)}
-                  className={`p-5 rounded-xl border cursor-pointer transition-all duration-300 min-h-[190px] flex flex-col justify-between shadow-md ${
-                    isFlipped
-                      ? 'bg-amber-950/40 border-gold text-chalk'
-                      : 'bg-black/40 border-chalk/20 hover:border-gold/50 text-chalk'
-                  }`}
+                  className={`p-5 rounded-xl border cursor-pointer transition-all duration-300 min-h-[190px] flex flex-col justify-between shadow-md ${isFlipped
+                    ? 'bg-amber-950/40 border-gold text-chalk'
+                    : 'bg-black/40 border-chalk/20 hover:border-gold/50 text-chalk'
+                    }`}
                 >
                   {isFlipped ? (
                     <div>
@@ -280,11 +279,10 @@ spontaneousness -> spontaneous (via ness$)`,
               <button
                 key={lab.id}
                 onClick={() => setActiveLab(lab.id)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors ${
-                  activeLab === lab.id
-                    ? 'bg-gold text-wood-dark font-bold shadow'
-                    : 'bg-black/30 hover:bg-black/50 text-chalk/80 border border-chalk/10'
-                }`}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors ${activeLab === lab.id
+                  ? 'bg-gold text-wood-dark font-bold shadow'
+                  : 'bg-black/30 hover:bg-black/50 text-chalk/80 border border-chalk/10'
+                  }`}
               >
                 <span>{lab.placeholder}</span>
                 <span className="hidden sm:inline">· {lab.title.split(':')[0]}</span>
@@ -368,11 +366,10 @@ spontaneousness -> spontaneous (via ness$)`,
               <button
                 key={ex.lang}
                 onClick={() => setSelectedLangIndex(idx)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
-                  selectedLangIndex === idx
-                    ? 'bg-gold text-wood-dark shadow-md scale-105'
-                    : 'bg-black/30 text-chalk/80 hover:bg-black/50 border border-chalk/10'
-                }`}
+                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${selectedLangIndex === idx
+                  ? 'bg-gold text-wood-dark shadow-md scale-105'
+                  : 'bg-black/30 text-chalk/80 hover:bg-black/50 border border-chalk/10'
+                  }`}
               >
                 <Globe className="w-3.5 h-3.5" />
                 <span>{ex.nativeName} ({ex.lang})</span>
@@ -448,7 +445,7 @@ spontaneousness -> spontaneous (via ness$)`,
           Class Moments & The Stars System
         </h2>
         <p className="text-sm text-chalk/80 leading-relaxed mb-6">
-          In [MAM'S NAME]'s classroom, active questions were celebrated. Sharp insights earned gold stars on her podium register. Here are 6 memorable moments and 4 phrases that stuck with me.
+          In Dr. SHARMILA BANU K mam's classroom, active questions were celebrated. Sharp insights earned gold stars on her podium register. Here are 6 memorable moments and 4 phrases that stuck with me.
         </p>
 
         {/* 6 Class Memories Grid */}
@@ -470,7 +467,7 @@ spontaneousness -> spontaneous (via ness$)`,
                 </p>
               </div>
               <div className="pt-2 mt-3 border-t border-chalk/10 text-[10px] text-chalk/50 font-mono">
-                VIT Technology Tower Class Session
+                VIT prp Class Session
               </div>
             </div>
           ))}

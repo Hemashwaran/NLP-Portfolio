@@ -1,18 +1,18 @@
 import { PageData, Flashcard, QuizQuestion } from './types';
 
 export const OWNER_DETAILS = {
-  name: "[MY NAME]",
-  regNo: "[REG NO]",
-  programme: "[PROGRAMME, YEAR]",
-  faculty: "[MAM'S NAME]",
-  semester: "[SEM]",
+  name: "K.Hemashwaran",
+  regNo: "23MID0436",
+  programme: "Integrated MTech CSE(Data Science)",
+  faculty: "Dr. SHARMILA BANU K",
+  semester: "7",
   courseCode: "CSE3002",
   courseTitle: "Natural Language Processing",
   university: "VIT Vellore",
-  academicYear: "Winter Semester 2025-2026",
+  academicYear: "fall Semester 2026-2027",
   evaluation: {
     cat1: "CAT 1 Completed",
-    cat2: "CAT 2 Completed (FSA & Morphology Highlight)",
+    cat2: "CAT 2 Completed",
     fat: "FAT (Upcoming)",
     starsEarned: 5,
   }
@@ -46,11 +46,11 @@ export const PAGES_DATA: PageData[] = [
     wingId: 'A',
     wingTitle: 'Wing A · Arrival',
     title: 'Take Your Seat',
-    subtitle: 'Desk 24, Row 3 · Technology Tower (TT), VIT Vellore',
+    subtitle: 'Desk 24, Row 3 · prp, VIT Vellore',
     takeaway: 'Sit down, put your bag on the hook, and look up at the green board. NLP is about making machines understand human thought, not just grammar rules.',
-    myTakeawayNote: 'Walking into TT 3rd floor at 8:50 AM with tea in hand—ready to see language turned into math.',
+    myTakeawayNote: 'Walking into prp floor at 8:50 AM with tea in hand—ready to see language turned into math.',
     cameraTarget: 'front',
-    placeholderTags: ['[MY NAME]', '[REG NO]'],
+    placeholderTags: ['K.Hemashwaran', '23MID046'],
     content: [
       "Welcome to my seat in the Natural Language Processing classroom at VIT Vellore. As you take your place at this wooden desk in the third row, the morning sunlight filters through the high windows, illuminating dust specks dancing around the slowly spinning ceiling fan.",
       "On the chalkboard in front, the title 'Natural Language Processing' is freshly lettered in soft chalk. On your desk rests my spiral notebook, a worn pencil case, and my laptop half-open to a Jupyter terminal.",
@@ -67,9 +67,9 @@ export const PAGES_DATA: PageData[] = [
     takeaway: 'Before taking NLP, I thought it was just regular expressions and keyword search. I quickly realized human language is wildly messy, context-heavy, and beautiful.',
     myTakeawayNote: 'Machines love clean matrices; humans speak in idioms, sarcasm, and regional slang. Bridging that gap is the real thrill.',
     cameraTarget: 'blackboard',
-    placeholderTags: ['[MY NAME]', '[REG NO]', "[MAM'S NAME]", '[SEM]'],
+    placeholderTags: ['K.Hemashwaran', '23MID046', "Dr. SHARMILA BANU K mam", '[SEM]'],
     content: [
-      "I am [MY NAME] (Reg. No: [REG NO]), studying [PROGRAMME, YEAR] at VIT Vellore. When I first registered for Natural Language Processing (CSE3002) under [MAM'S NAME] in [SEM] 2026, I anticipated an endless sea of dry probability tables and string parsing exercises.",
+      "I am K.Hemashwaran (Reg. No: 23MID046), studying Integrated Mtech CSE at VIT Vellore. When I first registered for Natural Language Processing (CSE3002) under Dr. SHARMILA BANU K mam in 7 SEM 2026, I anticipated an endless sea of dry probability tables and string parsing exercises.",
       "Instead, from Day 1, our mam framed NLP as a living bridge between cognitive linguistics and computing. Why does Google Translate stumble over honorifics in Indian languages? Why does a chatbot think 'I love Apple' is about fruit when the user is talking about stocks?",
       "The course structure keeps us grounded: CAT 1 tested our fundamentals; CAT 2 pushed us on morphology, syntax trees, and FSAs; and the upcoming FAT will synthesize everything into end-to-end language understanding.",
       "Here on the board is my personal dashboard of the course. Let's step into how this class reshaped the way I view human words."
@@ -119,7 +119,7 @@ export const PAGES_DATA: PageData[] = [
     cameraTarget: 'blackboard',
     placeholderTags: ['[CONFIRM which were discussed]'],
     content: [
-      "One hallmark of [MAM'S NAME]'s lectures was her refusal to isolate theory inside textbooks. Rather than starting with definitions of morphological inflection or state transitions, she began with real questions: 'How does Zomato know what you mean when you search for \"biriyani near me late night\"?'",
+      "One hallmark of Dr. SHARMILA BANU K mam's lectures was her refusal to isolate theory inside textbooks. Rather than starting with definitions of morphological inflection or state transitions, she began with real questions: 'How does Zomato know what you mean when you search for \"biriyani near me late night\"?'",
       "She paired each core topic with an industry application: Morphology with search query stemming and autocorrect; Named Entity Recognition with automated epidemic surveillance from local news; Text Classification with WhatsApp rumour and spam detection; and Speech acoustics with multilingual voice assistants.",
       "This practical anchoring changed how we listened. When taking notes, we weren't just memorizing formulas for marks; we were reverse-engineering the services running on our phones."
     ]
@@ -167,7 +167,7 @@ export const PAGES_DATA: PageData[] = [
     cameraTarget: 'starthart',
     placeholderTags: ['[MY MEMORIES]', '[MY WORDS]'],
     content: [
-      "Our class had a special energy. [MAM'S NAME] kept a running record of participation on her podium notes. When a student identified a clever counter-example or spotted a missing transition in an FSA, she smiled, drew a chalk star on the board, and credited them.",
+      "Our class had a special energy. Dr. SHARMILA BANU K mam kept a running record of participation on her podium notes. When a student identified a clever counter-example or spotted a missing transition in an FSA, she smiled, drew a chalk star on the board, and credited them.",
       "I earned my first 2 stars during an intense debate on lexical ambiguity: explaining why word-sense disambiguation struggles with polysemy when the surrounding context is under five tokens. Later, I earned 3 more stars when pitching the concept for our Outbreak Radar project.",
       "Her favorite classroom reminders still echo: 'Don't let your code pretend it understands language if it's merely matching sub-strings!' and 'If you can't parse it with a pencil, no deep learning framework will save you.'"
     ]
@@ -291,7 +291,7 @@ export const PAGES_DATA: PageData[] = [
     cameraTarget: 'exampaper',
     placeholderTags: ['[VERIFY MY ANSWER]'],
     content: [
-      "In our CAT 2 exam, [MAM'S NAME] presented this standout 10-mark question (CO4, Derivational Morphology):",
+      "In our CAT 2 exam, Dr. SHARMILA BANU K mam presented this standout 10-mark question (CO4, Derivational Morphology):",
       "\"Determine the transitions for the following words from the given Finite State Automaton (FSA) of Derivational Morphology. Also, if the given FSA does not include the transition for any of the given words, alter that part of the FSA and present the sequence of transitions.\"",
       "The five target words were: a) Minimal, b) Naturalization, c) Spontaneousness, d) Actually, and e) Revolutionary.",
       "This problem separated memorizers from thinkers: you had to dissect the root grammatical category (Noun, Verb, Adjective), follow valid derivational affixes through states q0 to q11, and augment the automaton where standard English suffixation was omitted."
@@ -402,13 +402,13 @@ export const PAGES_DATA: PageData[] = [
     wingTitle: 'Wing F · Stars & Outbreak Radar',
     title: 'The Star Chart: 5 Classroom Stars',
     subtitle: 'Recognized by Our Faculty for Active Discussion & Novel Ideas',
-    takeaway: 'Two stars for defending semantic ambiguity in class, three stars for proposing the Outbreak Radar framework.',
+    takeaway: 'Two starts for aswering questions in class, three stars for proposing the Outbreak Radar framework.',
     myTakeawayNote: 'Five little gold stars drawn on the chalkboard next to my roll number—the best encouragement of the semester.',
     cameraTarget: 'starthart',
     placeholderTags: ['[MY STORY]'],
     content: [
-      "In [MAM'S NAME]'s classroom, stars weren't given out for quietly taking notes. They were awarded when you stuck your neck out, challenged an assumption, or connected a theoretical NLP concept to a high-impact real-world crisis.",
-      "Stars 1 & 2 arrived in Week 4: during a lecture on lexical ambiguity, I demonstrated how sarcasm in student Twitter commentary inverted sentiment classification scores, presenting an n-gram heuristic to capture tonal shifts.",
+      "In Dr. SHARMILA BANU K mam's classroom, stars weren't given out for quietly taking notes. They were awarded when you stuck your neck out, challenged an assumption, or connected a theoretical NLP concept to a high-impact real-world crisis.",
+      "Stars 1 & 2 arrived in Week 4: I answered 2 questions asked in class by mam so i got 2 starts for answering questions",
       "Stars 3, 4, & 5 arrived when presenting our Outbreak Radar concept: showing how NLP could parse regional newspaper reports and inter-district bus manifests during the Nipah and viral fever outbreaks to predict transmission corridors before official bulletins were issued."
     ]
   },
@@ -455,7 +455,7 @@ export const PAGES_DATA: PageData[] = [
     cameraTarget: 'exampaper',
     placeholderTags: ['[WHICH QUESTION]'],
     content: [
-      "In many engineering courses, assessment papers reward memorizing slide definitions and reproducing static diagrams. [MAM'S NAME]'s CAT 2 was an entirely different breed.",
+      "In many engineering courses, assessment papers reward memorizing slide definitions and reproducing static diagrams. Dr. SHARMILA BANU K mam's CAT 2 was an entirely different breed.",
       "The paper tested whether we truly understood the computational mechanics of language. In the derivational morphology section, the given FSA deliberately omitted transitions for words like 'minimal' and 'revolutionary'—forcing us to explain where the automaton blocked and justify new state transitions.",
       "On question 3 (Morphology & State Sequences), I carefully sketched the derivation paths and explained why the bound suffix '-al' required an adjectival transition branch. Mam wrote a handwritten 'Good!' in green ink next to my solution—a proud moment that validated all my late-night revision."
     ]
@@ -499,14 +499,14 @@ export const PAGES_DATA: PageData[] = [
     wingId: 'H',
     wingTitle: 'Wing H · Reflection',
     title: 'Reflection & Heartfelt Thank-You',
-    subtitle: 'What Changed in How I See Language & A Note to [MAM\'S NAME]',
+    subtitle: 'What Changed in How I See Language & A Note to Dr. SHARMILA BANU K mam',
     takeaway: 'A great teacher doesn\'t just deliver syllabus units; she sparks curiosity that spills out of the classroom into everyday life.',
-    myTakeawayNote: 'To [MAM\'S NAME]: thank you for your patience, your chalk stars, and for making a complex field feel welcoming and fun.',
+    myTakeawayNote: 'To Dr. SHARMILA BANU K mam: thank you for your patience, your chalk stars, and for making a complex field feel welcoming and fun.',
     cameraTarget: 'blackboard',
-    placeholderTags: ["[MAM'S NAME]"],
+    placeholderTags: ["Dr. SHARMILA BANU K mam"],
     content: [
       "Before this course, I took language for granted. I assumed words were tidy containers for concepts, easily mapped into computer databases. Now, I notice ambiguity and morphology everywhere: in street hoardings, Tamil poetry, automated customer care bots, and speech transcription glitches.",
-      "This shift in perspective is entirely thanks to our faculty, [MAM'S NAME]. Her patience in answering every query, her encouragement whenever we stumbled in Jupyter labs, and her insistence on grounding theory in real human problems made CSE3002 my favorite course this semester.",
+      "This shift in perspective is entirely thanks to our faculty, Dr. SHARMILA BANU K mam. Her patience in answering every query, her encouragement whenever we stumbled in Jupyter labs, and her insistence on grounding theory in real human problems made CSE3002 my favorite course this semester.",
       "Thank you, Mam, for making the classroom a place of lively debate, for pushing us to think beyond standard answers, and for believing in our project ideas. This portfolio is a tribute to your teaching."
     ]
   },
@@ -519,7 +519,7 @@ export const PAGES_DATA: PageData[] = [
     takeaway: 'Thank you for taking a seat in our classroom! Let’s keep discussing language, code, and compassionate technology.',
     myTakeawayNote: 'Click the desk clock to ring the school bell, click the ceiling fan to spin it, or press S to scatter stars!',
     cameraTarget: 'desk',
-    placeholderTags: ['[MY NAME]', '[REG NO]', '[MY EMAIL]', '[LINKEDIN]', '[GITHUB]'],
+    placeholderTags: ['K.Hemashwaran', '23MID046', '[MY EMAIL]', '[LINKEDIN]', '[GITHUB]'],
     content: [
       "Thank you for exploring all 30 periods of 'The Classroom View'! I hope this student-eye portfolio gave you a genuine feel for how we studied Natural Language Processing at VIT Vellore.",
       "Connect with me: Email: [MY EMAIL] · LinkedIn: [LINKEDIN] · GitHub: [GITHUB]. All code for this portfolio is open-source and built with React, Vite, Tailwind CSS, and Framer Motion.",
