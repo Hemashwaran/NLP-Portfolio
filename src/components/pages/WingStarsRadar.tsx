@@ -108,7 +108,10 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
               <p className="text-xs sm:text-sm text-chalk/90 leading-relaxed">
                 Mam asked us to prepare an idea using an NLP application. I presented two ideas: Outbreak Radar, which links places mentioned in news reports of fever cases with bus routes, and a rumour detection idea for health alerts. Mam gave 3 stars for those ideas.
               </p>
-              <figure className="mt-3">
+            </div>
+          )}
+              <figure className="mt-5 p-4 rounded-xl bg-chalkboard-dark border border-gold/30">
+                <span className="text-xs font-mono font-bold text-gold uppercase tracking-wider block mb-2">Proof: Mam's 3-star message</span>
                 <img
                   src="/photos/stars-whatsapp.jpg"
                   alt="Class WhatsApp group: Sharmila Banu K mam giving 3 stars for each member of our team"
@@ -119,8 +122,6 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
                   Mam's message in our class group: "3 ⭐s for each member of this team". Phone numbers blurred.
                 </figcaption>
               </figure>
-            </div>
-          )}
         </div>
       </div>
     );
