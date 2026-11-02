@@ -1,6 +1,6 @@
 # The Classroom View — NLP Course Portfolio (25 Periods)
 
-A first-person, student's-eye portfolio website for the **Natural Language Processing (CSE3002)** course at **VIT Vellore**, set from a third-row desk in the prp.
+A first-person, student's-eye portfolio website for the **Natural Language Processing (CSI4001)** course at **VIT Vellore**, set from a third-row desk in the prp.
 
 The visitor sits in the student's seat facing the chalkboard, notebook, and laptop, and can explore all 25 periods, trace derivational finite state automata, try a bigram model, see real screenshots of the *Campus Connect* assistant, and trigger classroom Easter eggs.
 

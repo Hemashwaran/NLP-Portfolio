@@ -145,7 +145,7 @@ export function App() {
                   The Classroom View
                 </span>
                 <span className="text-[11px] text-chalk/60 font-mono block">
-                  VIT Vellore · CSE3002 NLP
+                  VIT Vellore · CSI4001 NLP
                 </span>
               </div>
             </button>

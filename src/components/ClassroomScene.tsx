@@ -204,7 +204,7 @@ export const ClassroomScene: React.FC<ClassroomSceneProps> = ({
         <line x1="390" y1="145" x2="810" y2="145" stroke="#f2b84b" strokeWidth="2.5" strokeDasharray="6 3" opacity="0.85" />
 
         <text x="600" y="180" textAnchor="middle" fill="#dcd7cc" fontSize="19" fontFamily="'Patrick Hand', cursive">
-          CSE3002 · prp · VIT Vellore
+          CSI4001 · prp · VIT Vellore
         </text>
         <text x="600" y="215" textAnchor="middle" fill="#99d98c" fontSize="16" fontFamily="'DM Sans', sans-serif">
           Faculty: Dr. SHARMILA BANU K mam · 25 Periods · 8 Wings

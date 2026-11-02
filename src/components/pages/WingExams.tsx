@@ -42,7 +42,7 @@ export const WingExams: React.FC<WingExamsProps> = ({ period }) => {
                     Vellore Institute of Technology
                   </span>
                   <h3 className="text-lg font-bold text-gray-900 font-sans">
-                    CAT 2 — CSE3002: Natural Language Processing
+                    CAT 2 — CSI4001: Natural Language Processing
                   </h3>
                   <div className="text-xs text-gray-600 font-mono pt-1">
                     Fall Semester 2026-27

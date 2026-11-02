@@ -6,7 +6,7 @@ export const OWNER_DETAILS = {
   programme: "Integrated MTech CSE (Data Science)",
   faculty: "Dr. SHARMILA BANU K mam",
   semester: "7",
-  courseCode: "CSE3002",
+  courseCode: "CSI4001",
   courseTitle: "Natural Language Processing",
   university: "VIT Vellore",
   academicYear: "Fall Semester 2026-2027",
@@ -50,7 +50,7 @@ export const PAGES_DATA: PageData[] = [
     myTakeawayNote: 'Machines like clean data; people speak in idioms, slang and mixed languages. Bridging that gap is what NLP is about.',
     cameraTarget: 'blackboard',
     content: [
-      "I am K.Hemashwaran (Reg. No: 23MID0436), studying Integrated MTech CSE (Data Science) at VIT Vellore. I took Natural Language Processing (CSE3002) under Dr. SHARMILA BANU K mam in Semester 7, Fall Semester 2026-27.",
+      "I am K.Hemashwaran (Reg. No: 23MID0436), studying Integrated MTech CSE (Data Science) at VIT Vellore. I took Natural Language Processing (CSI4001) under Dr. SHARMILA BANU K mam in Semester 7, Fall Semester 2026-27.",
       "The course covered how computers handle human language: text processing, morphology, POS tagging, n-gram language models, NER and text classification.",
       "CAT 1 and CAT 2 are done, and the FAT is coming up.",
       "Here on the board is a quick view of the course."
@@ -415,7 +415,7 @@ export const PAGES_DATA: PageData[] = [
     content: [
       "The semester moved from the introduction to NLP, through text processing and hands-on coding in class, to morphology and FSAs, our NLP application ideas, and CAT 2.",
       "Topics I learnt: regex tokenization and text cleaning, morphology and FSAs, n-gram language models, and NER and text classification.",
-      "Before this course I took language for granted. Now I notice ambiguity and morphology everywhere. Thank you, Mam, for answering every question, for the stars, and for making CSE3002 a course I enjoyed."
+      "Before this course I took language for granted. Now I notice ambiguity and morphology everywhere. Thank you, Mam, for answering every question, for the stars, and for making CSI4001 a course I enjoyed."
     ]
   },
   {
@@ -442,7 +442,7 @@ export const GLOSSARY_FLASHCARDS: Flashcard[] = [
   { id: '2', term: 'Tokenization', category: 'Basics', definition: 'Splitting running text into individual words, punctuation marks, or subword tokens.', example: '"I love NLP!" → ["I", "love", "NLP", "!"]' },
   { id: '3', term: 'Normalization', category: 'Basics', definition: 'Standardizing text format by lowercasing, handling punctuation, and expanding contractions.', example: '"won\'t" → "will not", "U.S.A." → "USA"' },
   { id: '4', term: 'Stop Words', category: 'Basics', definition: 'High-frequency function words that convey minimal topical information in search or retrieval.', example: '"is", "the", "in", "and", "at"' },
-  { id: '5', term: 'Regular Expression', category: 'Basics', definition: 'A formal sequence of characters defining a search pattern for text matching and extraction.', example: '\\b[A-Z]{3}\\d{4}\\b matches course codes like CSE3002' },
+  { id: '5', term: 'Regular Expression', category: 'Basics', definition: 'A formal sequence of characters defining a search pattern for text matching and extraction.', example: '\\b[A-Z]{3}\\d{4}\\b matches course codes like CSI4001' },
   { id: '6', term: 'Morpheme', category: 'Morphology', definition: 'The smallest meaningful grammatical unit of a language that cannot be divided further.', example: '"unbreakable" contains three morphemes: un-, break, -able' },
   { id: '7', term: 'Free Morpheme', category: 'Morphology', definition: 'A morpheme that can stand alone as a self-contained word.', example: '"cat", "write", "green", "desk"' },
   { id: '8', term: 'Bound Morpheme', category: 'Morphology', definition: 'A morpheme that cannot stand alone; it must attach to a root word as an affix.', example: 'prefixes (re-, un-) and suffixes (-ing, -tion)' },

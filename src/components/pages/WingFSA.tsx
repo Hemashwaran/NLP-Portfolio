@@ -48,7 +48,7 @@ export const WingFSA: React.FC<WingFSAProps> = ({ period }) => {
                 <span className="px-2.5 py-0.5 rounded text-xs font-mono font-bold bg-red-500/20 text-red-300 border border-red-500/30">
                   Continuous Assessment Test 2 (CAT 2)
                 </span>
-                <span className="text-xs text-chalk/60 font-mono">CSE3002 · CO4 Derivational Morphology</span>
+                <span className="text-xs text-chalk/60 font-mono">CSI4001 · CO4 Derivational Morphology</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold font-chalk text-chalk">
                 The 10-Mark Exam Question Card

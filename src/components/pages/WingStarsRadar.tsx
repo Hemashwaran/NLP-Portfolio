@@ -45,7 +45,7 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
           {/* Central Star Board Presentation */}
           <div className="p-6 rounded-2xl bg-black/40 border-2 border-gold/40 text-center space-y-4 mb-6">
             <span className="text-xs font-mono text-chalk/60 uppercase tracking-wider block">
-              Student Name: {OWNER_DETAILS.name} · CSE3002
+              Student Name: {OWNER_DETAILS.name} · CSI4001
             </span>
 
             {/* 5 Animated Gold Stars */}

@@ -49,7 +49,7 @@ export const DiaryDrawer: React.FC<DiaryDrawerProps> = ({
                 Student Course Diary & Index
               </h2>
               <p className="text-xs text-chalk/80 font-sans">
-                CSE3002 · Natural Language Processing · VIT Vellore
+                CSI4001 · Natural Language Processing · VIT Vellore
               </p>
             </div>
           </div>

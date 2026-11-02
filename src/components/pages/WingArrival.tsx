@@ -88,7 +88,7 @@ export const WingArrival: React.FC<WingArrivalProps> = ({
             <div>
               <span className="text-xs font-mono text-gold uppercase tracking-wider block">Course Introduction</span>
               <h2 className="text-2xl sm:text-3xl font-bold font-chalk text-chalk">
-                Welcome to CSE3002: Natural Language Processing
+                Welcome to CSI4001: Natural Language Processing
               </h2>
             </div>
             <span className="px-3 py-1 rounded-full text-xs font-mono bg-black/40 text-chalk-green border border-chalk/10">

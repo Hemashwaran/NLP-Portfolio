@@ -262,7 +262,7 @@ export const WingConcepts: React.FC<WingConceptsProps> = ({ period }) => {
             <div className="flex items-center justify-between mt-1 text-xs text-chalk/60">
               <span>{tokenInput.length} characters</span>
               <button
-                onClick={() => setTokenInput("VIT Central Library is open on Sunday for CSE3002 revision!")}
+                onClick={() => setTokenInput("VIT Central Library is open on Sunday for CSI4001 revision!")}
                 className="text-gold hover:underline"
               >
                 Insert Sample Sentence

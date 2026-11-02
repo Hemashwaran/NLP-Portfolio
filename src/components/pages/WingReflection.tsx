@@ -155,7 +155,7 @@ export const WingReflection: React.FC<WingReflectionProps> = ({ period, onReturn
                 Dear <PlaceholderBadge label={OWNER_DETAILS.faculty} />,
               </p>
               <p className="font-chalk text-base text-gray-700 leading-relaxed mb-3">
-                Thank you for making CSE3002 one of the most engaging and intellectually rewarding courses of my college journey.
+                Thank you for making CSI4001 one of the most engaging and intellectually rewarding courses of my college journey.
               </p>
               <p className="font-chalk text-base text-gray-700 leading-relaxed mb-3">
                 Your patience in answering every query, the enthusiasm with which you drew stars on the chalkboard, and your insistence that we test algorithms in our own regional mother tongues turned an intimidating theoretical subject into a living passion.
