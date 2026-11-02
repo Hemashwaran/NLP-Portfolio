@@ -111,6 +111,22 @@ export const WingCampusConnect: React.FC<WingCampusConnectProps> = ({ period }) 
               </p>
             </div>
           </div>
+
+          <div>
+            <span className="text-xs text-gold font-bold font-mono block mb-2">04. Our Team Presenting Campus Connect</span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {[
+                { src: '/photos/cc-title-slide.jpg', alt: 'Campus Connect title slide', caption: 'Our title slide: Harishankar A (23MID0380), Rohan P H (23MID0440), Hemashwaran K (23MID0436).' },
+                { src: '/photos/cc-presenting.jpg', alt: 'Our team presenting Campus Connect in class', caption: 'Presenting Campus Connect in class.' },
+                { src: '/photos/cc-demo.jpg', alt: 'Showing the Campus Connect demo in the lab', caption: 'Showing the demo in the lab.' },
+              ].map((ph) => (
+                <figure key={ph.src} className="rounded-xl bg-black/40 border border-chalk/10 overflow-hidden">
+                  <img src={ph.src} alt={ph.alt} loading="lazy" className="w-full h-60 object-contain bg-black/60" />
+                  <figcaption className="text-xs text-chalk/70 p-2.5 leading-relaxed">{ph.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     );

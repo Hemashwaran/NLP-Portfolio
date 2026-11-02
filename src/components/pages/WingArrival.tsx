@@ -101,6 +101,12 @@ export const WingArrival: React.FC<WingArrivalProps> = ({
               <h3 className="text-lg font-bold text-chalk-yellow font-chalk mb-2">
                 Who I Am & Expectations vs. Reality
               </h3>
+              <img
+                src="/photos/me.jpg"
+                alt={`${OWNER_DETAILS.name} at the beach`}
+                loading="lazy"
+                className="w-full max-w-xs aspect-[4/3] object-cover rounded-xl border-2 border-chalk/20 shadow-lg mb-3"
+              />
               <p className="text-sm text-chalk/90 leading-relaxed mb-3">
                 My name is <PlaceholderBadge label={OWNER_DETAILS.name} field="Student Name" />, Reg No. <PlaceholderBadge label={OWNER_DETAILS.regNo} field="Register Number" />, currently pursuing <PlaceholderBadge label={OWNER_DETAILS.programme} field="Programme & Year" /> at VIT Vellore.
               </p>
