@@ -1,15 +1,23 @@
-# The Classroom View — NLP Course Portfolio (30 Periods)
+# The Classroom View — NLP Course Portfolio (25 Periods)
 
 A first-person, student's-eye portfolio website for the **Natural Language Processing (CSE3002)** course at **VIT Vellore**, set from a third-row desk in the prp.
 
-Rather than a conventional slide deck or a book flip, the visitor sits in the student's seat facing the chalkboard, notebook, and laptop. The visitor can explore all 30 periods, trace derivational finite state automata, test bigram language models, inspect the *Campus Connect* assistant, and trigger classroom Easter eggs.
+The visitor sits in the student's seat facing the chalkboard, notebook, and laptop, and can explore all 25 periods, trace derivational finite state automata, try a bigram model, see real screenshots of the *Campus Connect* assistant, and trigger classroom Easter eggs.
 
----
+## 🏛️ Structure: 25 Periods Across 8 Wings
 
-## 🏛️ Structure: 30 Periods Across 8 Wings
-
-| Wing | Periods | Focus & Key Interactions |
+| Wing | Periods | Focus |
 | :--- | :--- | :--- |
+| **Wing A · Arrival** | Periods 1–4 | Classroom desk view, Welcome Board, period guide, About Me |
+| **Wing B · How Our Mam Taught** | Periods 5–8 | Topics & real applications, hands-on coding in class, mother tongue morphology, stars system |
+| **Wing C · Concept Notebook** | Periods 9–15 | Levels of NLP, regex tokenizer, morpheme splitter, POS tagging, bigram generator, NER highlighter, 25 flashcards |
+| **Wing D · The FSA Problem** | Periods 16–17 | CAT 2 FSA question and interactive derivational morphology FSA (q0–q11) |
+| **Wing E · Campus Connect** | Periods 18–20 | Project overview, real app screenshots & features, challenges |
+| **Wing F · Stars & Project Ideas** | Periods 21–22 | 5 stars, rumour detection and Outbreak Radar ideas |
+| **Wing G · CAT 2** | Period 23 | CAT 2 experience and preparation |
+| **Wing H · Reflection** | Periods 24–25 | Timeline, reflection & thank-you, contact and credits |
+
+--- | :--- | :--- |
 | **Wing A · Arrival** | Periods 1–4 | Classroom desk view, Welcome Board, Class Diary index, Skills chart |
 | **Wing B · How Our Mam Taught** | Periods 5–8 | Real application flip cards, interactive Jupyter notebook cells, mother tongue switcher, 5-star recognition |
 | **Wing C · Concept Notebook** | Periods 9–15 | Levels of NLP stack, live regex tokenizer box, morpheme splitter, POS tag guesser, bigram next-word generator, NER highlighter, 25 glossary flashcards |
@@ -68,7 +76,7 @@ src/data/content.ts
    public/assets/screenshots/campus-4.png
    ```
    *(If omitted, the portfolio gracefully renders vector mockups with zero broken image links.)*
-3. **Auditing Placeholders**: Run `npm run audit:placeholders` to view a line-by-line report of any remaining tags. See `PLACEHOLDERS.md` for a complete reference.
+3. **Auditing Placeholders**: Run `npm run audit:placeholders` to check for any leftover placeholder tags.
 
 ---
 

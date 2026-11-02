@@ -1,15 +1,15 @@
-import { PageData, Flashcard, QuizQuestion } from './types';
+import { PageData, Flashcard } from './types';
 
 export const OWNER_DETAILS = {
   name: "K.Hemashwaran",
   regNo: "23MID0436",
-  programme: "Integrated MTech CSE(Data Science)",
-  faculty: "Dr. SHARMILA BANU K",
+  programme: "Integrated MTech CSE (Data Science)",
+  faculty: "Dr. SHARMILA BANU K mam",
   semester: "7",
   courseCode: "CSE3002",
   courseTitle: "Natural Language Processing",
   university: "VIT Vellore",
-  academicYear: "fall Semester 2026-2027",
+  academicYear: "Fall Semester 2026-2027",
   evaluation: {
     cat1: "CAT 1 Completed",
     cat2: "CAT 2 Completed",
@@ -18,164 +18,144 @@ export const OWNER_DETAILS = {
   }
 };
 
-export const TOUR_PRESETS = [
-  {
-    id: 'two-minute',
-    title: '2-Minute Speed Tour',
-    description: 'Quick walkthrough of the essentials: The Classroom, FSA derivation problem, Campus Connect, and Star moments.',
-    pages: [1, 2, 8, 16, 17, 19, 23, 29]
-  },
-  {
-    id: 'ten-minute',
-    title: '10-Minute Deep Dive',
-    description: 'A balanced tour through all core wings: Mam’s pedagogy, hands-on Jupyter, FSA problem, project showcase, and CAT2 review.',
-    pages: [1, 2, 5, 6, 7, 8, 9, 11, 16, 17, 18, 19, 21, 23, 25, 26, 29]
-  },
-  {
-    id: 'full-tour',
-    title: 'Complete 30-Period Journey',
-    description: 'Experience every single period from Arrival to Final Reflections, quizzes, interactive flashcards, and notebooks.',
-    pages: Array.from({ length: 30 }, (_, i) => i + 1)
-  }
-];
+export const TOTAL_PERIODS = 25;
 
 export const PAGES_DATA: PageData[] = [
-  // WING A — ARRIVAL (Pages 1–4)
+  // WING A — ARRIVAL (Periods 1–4)
   {
     id: 1,
+    legacyIds: [1],
     wingId: 'A',
     wingTitle: 'Wing A · Arrival',
     title: 'Take Your Seat',
-    subtitle: 'Desk 24, Row 3 · prp, VIT Vellore',
-    takeaway: 'Sit down, put your bag on the hook, and look up at the green board. NLP is about making machines understand human thought, not just grammar rules.',
-    myTakeawayNote: 'Walking into prp floor at 8:50 AM with tea in hand—ready to see language turned into math.',
+    subtitle: 'Row 3 · prp, VIT Vellore',
+    takeaway: 'NLP is about making machines understand human language, not just grammar rules.',
+    myTakeawayNote: 'Walking into the prp floor, ready to see language turned into math.',
     cameraTarget: 'front',
-    placeholderTags: ['K.Hemashwaran', '23MID046'],
     content: [
-      "Welcome to my seat in the Natural Language Processing classroom at VIT Vellore. As you take your place at this wooden desk in the third row, the morning sunlight filters through the high windows, illuminating dust specks dancing around the slowly spinning ceiling fan.",
-      "On the chalkboard in front, the title 'Natural Language Processing' is freshly lettered in soft chalk. On your desk rests my spiral notebook, a worn pencil case, and my laptop half-open to a Jupyter terminal.",
-      "This portfolio isn't a dry technical report or a collection of slides. It is a genuine, student's-eye record of 30 lecture periods: how our mam taught us, the times we were stumped by finite state automata, how we tied grammar to our mother tongues, and how our project 'Campus Connect' was born.",
-      "Take your seat, listen for the bell, and flick through our semester."
+      "Welcome to my seat in the Natural Language Processing classroom at VIT Vellore.",
+      "On the chalkboard in front, the title 'Natural Language Processing' is written in chalk. On the desk are my notebook and my laptop.",
+      "This portfolio is my record of the course in 25 periods: what our mam taught us, the topics I learnt in class, the FSA question from CAT 2, and our project, Campus Connect.",
+      "Take your seat and flick through the semester."
     ]
   },
   {
     id: 2,
+    legacyIds: [2],
     wingId: 'A',
     wingTitle: 'Wing A · Arrival',
     title: 'Welcome Board',
     subtitle: 'Chalkboard Introduction & Course at a Glance',
-    takeaway: 'Before taking NLP, I thought it was just regular expressions and keyword search. I quickly realized human language is wildly messy, context-heavy, and beautiful.',
-    myTakeawayNote: 'Machines love clean matrices; humans speak in idioms, sarcasm, and regional slang. Bridging that gap is the real thrill.',
+    takeaway: 'Before taking NLP, I thought it was just regular expressions and keyword search. I learnt that human language is messy and full of context.',
+    myTakeawayNote: 'Machines like clean data; people speak in idioms, slang and mixed languages. Bridging that gap is what NLP is about.',
     cameraTarget: 'blackboard',
-    placeholderTags: ['K.Hemashwaran', '23MID046', "Dr. SHARMILA BANU K mam", '[SEM]'],
     content: [
-      "I am K.Hemashwaran (Reg. No: 23MID046), studying Integrated Mtech CSE at VIT Vellore. When I first registered for Natural Language Processing (CSE3002) under Dr. SHARMILA BANU K mam in 7 SEM 2026, I anticipated an endless sea of dry probability tables and string parsing exercises.",
-      "Instead, from Day 1, our mam framed NLP as a living bridge between cognitive linguistics and computing. Why does Google Translate stumble over honorifics in Indian languages? Why does a chatbot think 'I love Apple' is about fruit when the user is talking about stocks?",
-      "The course structure keeps us grounded: CAT 1 tested our fundamentals; CAT 2 pushed us on morphology, syntax trees, and FSAs; and the upcoming FAT will synthesize everything into end-to-end language understanding.",
-      "Here on the board is my personal dashboard of the course. Let's step into how this class reshaped the way I view human words."
+      "I am K.Hemashwaran (Reg. No: 23MID0436), studying Integrated MTech CSE (Data Science) at VIT Vellore. I took Natural Language Processing (CSE3002) under Dr. SHARMILA BANU K mam in Semester 7, Fall Semester 2026-27.",
+      "The course covered how computers handle human language: text processing, morphology, POS tagging, n-gram language models, NER and text classification.",
+      "CAT 1 and CAT 2 are done, and the FAT is coming up.",
+      "Here on the board is a quick view of the course."
     ]
   },
   {
     id: 3,
+    legacyIds: [3],
     wingId: 'A',
     wingTitle: 'Wing A · Arrival',
     title: 'Class Diary (Index)',
-    subtitle: 'Contents, 30 Periods & Suggested Guided Pathways',
-    takeaway: '30 periods divided into 8 distinct wings. Explore at your own pace or follow one of our curated itineraries.',
-    myTakeawayNote: 'Every entry corresponds to a distinct classroom discussion or hands-on lab milestone.',
+    subtitle: 'Contents: 25 Periods in 8 Wings',
+    takeaway: '25 periods divided into 8 wings. Jump to any wing or go period by period.',
+    myTakeawayNote: 'Each entry is a topic or part of the course.',
     cameraTarget: 'diary',
     content: [
-      "This school diary contains all 30 periods of our NLP semester, organized into 8 topical wings: Arrival, How Our Mam Taught, Concept Notebook, The FSA Problem, Campus Connect Project, Stars & Outbreak Radar, Exams, and Reflection.",
-      "If you are short on time, select the '2-Minute Speed Tour' to witness the key breakthroughs: our mother-tongue experiments, the challenging 10-mark FSA derivational morphology problem, and our Campus Connect assistant.",
-      "Or choose the '10-Minute Deep Dive' for a comprehensive tour across theory, Jupyter labs, and CAT2 reflections. For the curious, browse period by period using the arrow keys or the timetable strip below."
+      "This diary holds all 25 periods of the portfolio, organised into 8 wings: Arrival, How Our Mam Taught, Concept Notebook, The FSA Problem, Campus Connect Project, Stars & Project Ideas, CAT 2, and Reflection.",
+      "Use the guide below to jump to a wing, or move period by period with the arrow keys or the timetable strip at the bottom."
     ]
   },
   {
     id: 4,
+    legacyIds: [4],
     wingId: 'A',
     wingTitle: 'Wing A · Arrival',
     title: 'About Me & My Skills',
-    subtitle: 'My Background, Curiosity & Practical Toolkit',
-    takeaway: 'Combining software engineering with a love for languages: building tools that speak our vernacular.',
-    myTakeawayNote: 'Tools are easy to pick up; the patience to understand dialectal variations and ambiguity is what makes an NLP engineer.',
+    subtitle: 'My Background & What I Practised',
+    takeaway: 'Combining software with an interest in languages.',
+    myTakeawayNote: 'Tools are easy to pick up; understanding ambiguity in language takes patience.',
     cameraTarget: 'desk',
-    placeholderTags: ['[MY LEVELS]'],
     content: [
-      "I am an engineering student at VIT Vellore with an appetite for human-computer interaction, web development, and computational linguistics. Before this course, I was comfortable with standard Python scripting, Pandas data manipulation, and building React web interfaces.",
-      "NLP demanded a different mindset: moving beyond deterministic logic into statistical patterns, ambiguity resolution, and token semantics. Over the semester, my comfort with regex tokenization, morphological stemmers, FSA state minimization, and spaCy NER pipelines grew significantly.",
-      "What excites me most is multilingual NLP for Indian contexts—where code-mixing (Tanglish, Hinglish) and agglutinative grammars present genuine real-world challenges that standard Western-trained models fail to grasp."
+      "I am an engineering student at VIT Vellore interested in web development and language technology. Before this course I was comfortable with Python and building web interfaces.",
+      "NLP needed a different way of thinking: moving from fixed rules to patterns, ambiguity and meaning. In this course I learnt tokenization with regex, morphology and FSAs, n-gram models, and NER.",
+      "What interests me most is NLP for Indian languages, where code-mixing (Tanglish, Hinglish) and long suffix chains make things harder."
     ]
   },
 
-  // WING B — HOW OUR MAM TAUGHT (Pages 5–8)
+  // WING B — HOW OUR MAM TAUGHT (Periods 5–8)
   {
     id: 5,
+    legacyIds: [5],
     wingId: 'B',
     wingTitle: 'Wing B · How Our Mam Taught',
-    title: 'Learning Through Real Applications',
-    subtitle: 'From Classroom Theory to Everyday Technology',
-    takeaway: 'Mam never introduced an abstract formula or grammar rule without first demonstrating where it touches our daily digital lives.',
-    myTakeawayNote: 'Theory feels dry in a vacuum, but the moment you connect morphemes to Google Autocorrect, the room leans forward.',
+    title: 'Topics & Real Applications',
+    subtitle: 'Where What We Learnt Shows Up',
+    takeaway: 'Each topic we learnt in class connects to apps we use every day.',
+    myTakeawayNote: 'Once you know about morphemes, you start noticing them in autocorrect and search.',
     cameraTarget: 'blackboard',
-    placeholderTags: ['[CONFIRM which were discussed]'],
     content: [
-      "One hallmark of Dr. SHARMILA BANU K mam's lectures was her refusal to isolate theory inside textbooks. Rather than starting with definitions of morphological inflection or state transitions, she began with real questions: 'How does Zomato know what you mean when you search for \"biriyani near me late night\"?'",
-      "She paired each core topic with an industry application: Morphology with search query stemming and autocorrect; Named Entity Recognition with automated epidemic surveillance from local news; Text Classification with WhatsApp rumour and spam detection; and Speech acoustics with multilingual voice assistants.",
-      "This practical anchoring changed how we listened. When taking notes, we weren't just memorizing formulas for marks; we were reverse-engineering the services running on our phones."
+      "Learning each topic in class made me notice where it is used in real life.",
+      "Morphology and stemming show up in search and autocorrect; NER in pulling places and dates out of text; text classification in spam filters; and n-gram models in keyboard next-word suggestions."
     ]
   },
   {
     id: 6,
+    legacyIds: [6],
     wingId: 'B',
     wingTitle: 'Wing B · How Our Mam Taught',
-    title: 'Hands-On with a Corpus (Jupyter)',
-    subtitle: 'Laptop Open: Real Datasets, Messy Sentences, Working Code',
-    takeaway: 'Classroom concepts were immediately validated in Jupyter notebooks using real campus and Indian corpora.',
-    myTakeawayNote: 'Real text has spelling mistakes, emojis, and weird punctuation. Cleaning it taught me twice as much as clean slides.',
+    title: 'Hands-On Coding in Class',
+    subtitle: 'Tokenizing, N-grams & Suffix Rules',
+    takeaway: 'We had no separate lab, but mam made us write small pieces of code in class.',
+    myTakeawayNote: 'Running the code made each idea clearer than just reading the slides.',
     cameraTarget: 'laptop',
-    placeholderTags: ['[LAB 1]', '[LAB 2]', '[LAB 3]', '[NOTEBOOK / GITHUB LINK]'],
     content: [
-      "Every major concept in class was paired with a live Jupyter notebook session. Mam encouraged us to keep our laptops open on our desks, running code against real corpora rather than pre-sanitized textbook examples.",
-      "In Lab 1, we tackled tokenization, case normalization, and punctuation stripping across a corpus of campus circulars and local student queries. In Lab 2, we extracted n-grams and compared unigram vs. bigram language probabilities to predict the next token in student feedback.",
-      "In Lab 3, we wrote custom regular expression rules and morphological stemmers to isolate root words in English and Tamil transliterations. Seeing the code output immediately fail on irregular plural forms made linguistic edge cases unforgettable."
+      "We didn't have a lab for this course. In class, mam had us write small pieces of code to try out the topics, like tokenizing text and counting n-grams.",
+      "Below are simple versions of the kind of code we practised: a regex tokenizer, bigram counts, and a rule-based suffix stripper."
     ]
   },
   {
     id: 7,
+    legacyIds: [7],
     wingId: 'B',
     wingTitle: 'Wing B · How Our Mam Taught',
-    title: 'Learning in Our Mother Tongue',
-    subtitle: 'Multilingual Insights: Tamil, Telugu, Malayalam, Hindi & English',
-    takeaway: 'When mam explained morphological transitions in our regional mother tongues, complex automaton states suddenly clicked.',
-    myTakeawayNote: 'Indian languages are highly agglutinative—one root word can take half a dozen suffixes. It is the ultimate test for an FSA!',
+    title: 'Morphology in Our Mother Tongues',
+    subtitle: 'Tamil, Telugu, Malayalam, Hindi & English',
+    takeaway: 'Looking at suffixes in our own languages made FSA transitions easier to understand.',
+    myTakeawayNote: 'Indian languages are agglutinative: one root can take many suffixes. A real test for an FSA.',
     cameraTarget: 'blackboard',
-    placeholderTags: ['[REVIEW BY NATIVE SPEAKER]'],
     content: [
-      "VIT is a vibrant microcosm of India: in any bench in our classroom, you'll find students whose mother tongues span Tamil, Telugu, Malayalam, Hindi, Bengali, and Marathi. Mam used this diversity as our greatest classroom asset.",
-      "When teaching morphological inflection and derivational suffix transitions, she invited classmates to translate a root word—like 'school' or 'walk'—and attach case markers, plural markers, and honorific suffixes in their mother tongues.",
-      "In Tamil, a single root like 'போ' (go) morphs into 'போனான்' (he went), 'போவாள்' (she will go), 'போகிறார்கள்' (they are going). In Telugu, 'వెళ్ళు' (go) becomes 'వెళ్ళాడు' (he went). In Hindi, 'पढ़' (read) derives 'पढ़ाई' (studies) and 'पढ़ाकू' (studious). Grounding abstract FSA diagrams in our native intuitions made the math feel natural."
+      "Our class has students whose mother tongues include Tamil, Telugu, Malayalam and Hindi, which makes it easy to compare how different languages build words.",
+      "In Tamil, a root like 'போ' (go) becomes 'போனான்' (he went), 'போவாள்' (she will go), 'போகிறார்கள்' (they are going). In Hindi, 'मानव' (human) + '-ता' gives 'मानवता' (humanity).",
+      "Because these languages chain suffixes (root + derivational suffix + plural + case marker), an FSA models them well with sequences of states."
     ]
   },
   {
     id: 8,
+    legacyIds: [8],
     wingId: 'B',
     wingTitle: 'Wing B · How Our Mam Taught',
-    title: 'Class Moments & Stars System',
-    subtitle: 'Active Discussions, Chalkboard Challenges & 5 Gold Stars',
-    takeaway: 'Questions were welcomed, hypotheses were debated, and sharp insights earned stars that motivated the entire class.',
-    myTakeawayNote: 'Earning stars wasn’t about giving the textbook answer; it was about asking the question that made everyone pause.',
+    title: 'The Stars System',
+    subtitle: 'How I Earned 5 Stars',
+    takeaway: '2 stars for answering questions in class, 3 stars for the NLP application ideas I presented.',
+    myTakeawayNote: 'Five stars over the semester, and every one of them was a good push to take part.',
     cameraTarget: 'starthart',
-    placeholderTags: ['[MY MEMORIES]', '[MY WORDS]'],
     content: [
-      "Our class had a special energy. Dr. SHARMILA BANU K mam kept a running record of participation on her podium notes. When a student identified a clever counter-example or spotted a missing transition in an FSA, she smiled, drew a chalk star on the board, and credited them.",
-      "I earned my first 2 stars during an intense debate on lexical ambiguity: explaining why word-sense disambiguation struggles with polysemy when the surrounding context is under five tokens. Later, I earned 3 more stars when pitching the concept for our Outbreak Radar project.",
-      "Her favorite classroom reminders still echo: 'Don't let your code pretend it understands language if it's merely matching sub-strings!' and 'If you can't parse it with a pencil, no deep learning framework will save you.'"
+      "In Dr. SHARMILA BANU K mam's class, students earned stars for taking part.",
+      "I earned 2 stars for answering questions mam asked in class.",
+      "Mam also asked us to prepare an idea using an NLP application. I presented Outbreak Radar and a rumour detection idea, and mam gave 3 stars for them."
     ]
   },
 
-  // WING C — MY CONCEPT NOTEBOOK (Pages 9–15)
+  // WING C — MY CONCEPT NOTEBOOK (Periods 9–15)
   {
     id: 9,
+    legacyIds: [9],
     wingId: 'C',
     wingTitle: 'Wing C · My Concept Notebook',
     title: 'What is NLP? The Levels of Language',
@@ -191,11 +171,12 @@ export const PAGES_DATA: PageData[] = [
   },
   {
     id: 10,
+    legacyIds: [10],
     wingId: 'C',
     wingTitle: 'Wing C · My Concept Notebook',
     title: 'Text Processing Basics',
     subtitle: 'Tokenization, Normalization, Stopwords & Regular Expressions',
-    takeaway: 'Garbage in, garbage out: 70% of NLP is cleaning messy raw characters into meaningful linguistic tokens.',
+    takeaway: 'Garbage in, garbage out: a lot of NLP work is cleaning raw text into meaningful tokens.',
     myTakeawayNote: 'A missing regex flag or naive whitespace split can turn \"U.S.A.\" into three broken tokens and ruin your entire pipeline.',
     cameraTarget: 'laptop',
     content: [
@@ -206,6 +187,7 @@ export const PAGES_DATA: PageData[] = [
   },
   {
     id: 11,
+    legacyIds: [11],
     wingId: 'C',
     wingTitle: 'Wing C · My Concept Notebook',
     title: 'Morphology: Roots, Stems & Affixes',
@@ -221,6 +203,7 @@ export const PAGES_DATA: PageData[] = [
   },
   {
     id: 12,
+    legacyIds: [12],
     wingId: 'C',
     wingTitle: 'Wing C · My Concept Notebook',
     title: 'Grammar & Part-of-Speech Tagging',
@@ -236,12 +219,13 @@ export const PAGES_DATA: PageData[] = [
   },
   {
     id: 13,
+    legacyIds: [13],
     wingId: 'C',
     wingTitle: 'Wing C · My Concept Notebook',
     title: 'N-grams & Language Models',
     subtitle: 'Predicting the Next Word: Unigrams, Bigrams & Trigrams',
     takeaway: 'Language modeling computes the probability distribution of words based on their preceding context.',
-    myTakeawayNote: 'Even simple bigram frequency counts give your keyboard autocomplete surprisingly good intuition.',
+    myTakeawayNote: 'Even simple bigram counts can power basic next-word suggestions.',
     cameraTarget: 'laptop',
     content: [
       "An n-gram is a contiguous sequence of n items from a text stream. A unigram is a single word ('natural'), a bigram is a pair ('natural language'), and a trigram is a triplet ('natural language processing').",
@@ -251,280 +235,204 @@ export const PAGES_DATA: PageData[] = [
   },
   {
     id: 14,
+    legacyIds: [14],
     wingId: 'C',
     wingTitle: 'Wing C · My Concept Notebook',
     title: 'NER & Text Classification',
     subtitle: 'Extracting Named Entities & Categorizing Documents',
-    takeaway: 'Turning unstructured student chatter and news bulletins into structured entities: People, Places, and Emergency Alerts.',
-    myTakeawayNote: 'NER gave our Campus Connect and Outbreak Radar concepts their practical backbone.',
+    takeaway: 'Turning plain text into structured information: places, organisations, times and dates.',
+    myTakeawayNote: 'NER is what lets Campus Connect understand which building a student is asking about.',
     cameraTarget: 'wall',
     content: [
-      "Named Entity Recognition (NER) scans raw text to identify and classify proper nouns into predefined categories: PERSON, ORGANIZATION, LOCATION, DATE, and MEDICAL terms.",
-      "In our campus context, when a student types 'Is the TT library open until 9 PM on Sunday?', NER extracts 'TT library' as LOCATION, '9 PM' as TIME, and 'Sunday' as DATE, enabling deterministic database lookup.",
-      "Paired with Text Classification—which categorizes text into intent labels like 'Admissions', 'Hostel Query', or 'Health Emergency'—these techniques form the backbone of modern conversational agents. Try highlighting the entities in our sample sentence below!"
+      "Named Entity Recognition (NER) scans raw text to identify and classify proper nouns into predefined categories: PERSON, ORGANIZATION, LOCATION, TIME and DATE.",
+      "In our campus context, when a student types 'Is the Central Library open till 9 PM on Sunday?', NER picks out 'Central Library' as LOCATION, '9 PM' as TIME, and 'Sunday' as DATE, so the answer can be looked up.",
+      "Paired with Text Classification—which categorizes text into intent labels like 'Admissions', 'Hostel Query', or 'Library'—these techniques are the base of question-answering assistants. Try highlighting the entities in the sample sentence below."
     ]
   },
   {
     id: 15,
+    legacyIds: [15],
     wingId: 'C',
     wingTitle: 'Wing C · My Concept Notebook',
     title: 'Glossary Flashcards',
-    subtitle: '25 Essential NLP Terms: Mastered & Memorized',
+    subtitle: '25 Essential NLP Terms',
     takeaway: 'Quick-fire revision deck covering fundamental terminology across all syllabus units.',
-    myTakeawayNote: 'Flipping through these cards before CAT 2 was how I solidified my definitions and got full marks on Section A.',
+    myTakeawayNote: 'Flipping through these cards helped me revise definitions before CAT 2.',
     cameraTarget: 'desk',
     content: [
-      "Linguistic and algorithmic terminology can easily blur together during exam revision. Here is my complete set of 25 curated flashcards, organized across Basics, Morphology, Syntax, Semantics, and Models & NER.",
+      "Linguistic and algorithmic terminology can easily blur together during exam revision. Here is my set of 25 flashcards, organized across Basics, Morphology, Syntax, Semantics, and Models & NER.",
       "Click each card to flip and reveal its concise student-friendly definition and concrete example. Mark the ones you've mastered to track your progress with our live counter!"
     ]
   },
 
-  // WING D — THE FSA PROBLEM (Pages 16–18)
+  // WING D — THE FSA PROBLEM (Periods 16–17)
   {
     id: 16,
+    legacyIds: [16],
     wingId: 'D',
     wingTitle: 'Wing D · The FSA Problem',
     title: 'The Exam Question (CAT 2)',
     subtitle: 'Finite State Automata for English Derivational Morphology',
-    takeaway: 'A classic 10-mark examination problem testing whether a state machine can accurately parse derivational suffixes.',
-    myTakeawayNote: '10 marks on the line: you must trace valid paths step-by-step and identify exactly which transition is missing.',
+    takeaway: 'A 10-mark question testing whether a state machine can parse derivational suffixes.',
+    myTakeawayNote: 'You have to trace valid paths step by step and spot exactly which transition is missing.',
     cameraTarget: 'exampaper',
-    placeholderTags: ['[VERIFY MY ANSWER]'],
     content: [
-      "In our CAT 2 exam, Dr. SHARMILA BANU K mam presented this standout 10-mark question (CO4, Derivational Morphology):",
+      "In our CAT 2 exam, Dr. SHARMILA BANU K mam gave this 10-mark question (CO4, Derivational Morphology):",
       "\"Determine the transitions for the following words from the given Finite State Automaton (FSA) of Derivational Morphology. Also, if the given FSA does not include the transition for any of the given words, alter that part of the FSA and present the sequence of transitions.\"",
-      "The five target words were: a) Minimal, b) Naturalization, c) Spontaneousness, d) Actually, and e) Revolutionary.",
-      "This problem separated memorizers from thinkers: you had to dissect the root grammatical category (Noun, Verb, Adjective), follow valid derivational affixes through states q0 to q11, and augment the automaton where standard English suffixation was omitted."
+      "The five words were: a) Minimal, b) Naturalization, c) Spontaneousness, d) Actually, and e) Revolutionary.",
+      "To answer it, you had to find the root's category (Noun, Verb, Adjective), follow the derivational suffixes through the states, and add transitions where the FSA was missing a path."
     ]
   },
   {
     id: 17,
+    legacyIds: [17],
     wingId: 'D',
     wingTitle: 'Wing D · The FSA Problem',
     title: 'Interactive FSA & Walkthrough',
-    subtitle: 'States q0–q11, Animated Step Transitions & Augmented Edges',
-    takeaway: 'Explore the full state machine: see accepting double-circles, suffix transitions, and the exact custom paths for all 5 words.',
-    myTakeawayNote: 'Adding q0 --al--> q4 or q0 --ive--> q8: visual state tracking turns confusing exam theory into clear logic.',
+    subtitle: 'States q0–q11, Step Transitions & Added Edges',
+    takeaway: 'Explore the full state machine: accepting states, suffix transitions, and the paths for all 5 words.',
+    myTakeawayNote: 'Seeing the states visually turns confusing exam theory into clear logic.',
     cameraTarget: 'wall',
-    placeholderTags: ['[VERIFY MY ANSWER]'],
     content: [
-      "Here is the complete English derivational morphology FSA, rendered with interactive SVG states q0 through q11. Accepting states (where a complete, valid derived word is formed) are drawn as double circles.",
-      "Standard transitions cover common paths: q0 (Base Root) attaches '-ize' (V) to reach q1, '-ation' (N) to reach q2, '-able' (A) to reach q3, '-ity' (N) to reach q5, and '-ness' (N) to reach q6.",
-      "Select any of the five exam words below. The interactive diagram animates the transition sequence step-by-step. For words requiring an augmented path (such as '-al' turning a noun/root into an adjective), the newly proposed transition is highlighted in vibrant coral with a concise rationale."
-    ]
-  },
-  {
-    id: 18,
-    wingId: 'D',
-    wingTitle: 'Wing D · The FSA Problem',
-    title: 'In My Mother Tongue + Mini Quiz',
-    subtitle: 'Derivational Affixes in Indian Languages & 5-Question Check',
-    takeaway: 'Derivational morphology isn’t just an English phenomenon: Dravidian and Indo-Aryan languages show extraordinary suffix chains.',
-    myTakeawayNote: 'Testing yourself immediately after walking through the state machine cements the concepts permanently.',
-    cameraTarget: 'blackboard',
-    placeholderTags: ['[MY LANGUAGE]', '[REVIEW BY NATIVE SPEAKER]'],
-    content: [
-      "To appreciate why FSAs are universal, look at Indian languages. In Tamil, from the root 'மனிதன்' (man, Noun) we attach '-த்தனம்' to derive 'மனிதத்தனம்' (humanity, Noun). In Hindi, from 'मानव' (human) we append '-ता' to derive 'मानवता' (humanity), or from 'सफल' (successful) + '-ता' → 'सफलता' (success).",
-      "Because Indian languages are agglutinative, words can chain multiple suffixes: Root + Derivational Suffix + Plural Suffix + Case Marker. An FSA models this with graceful cycles and sequential accepting states.",
-      "Now, challenge yourself with our 5-question Derivational FSA mini-quiz below to verify your mastery of state transitions and category shifts!"
+      "Here is the English derivational morphology FSA, drawn with interactive states q0 through q11. Accepting states (where a complete, valid word is formed) are drawn as double circles.",
+      "Standard transitions cover common paths: q0 (base root) takes '-ize' (V) to reach q1, '-ation' (N) to reach q2, '-able' (A) to reach q3, '-ity' (N) to reach q5, and '-ness' (N) to reach q6.",
+      "Select any of the five exam words below to watch its transitions step by step. Where a word needs a new path (such as '-al' turning a root into an adjective), the added transition is highlighted with a short reason."
     ]
   },
 
-  // WING E — PROJECT: CAMPUS CONNECT (Pages 19–22)
+  // WING E — PROJECT: CAMPUS CONNECT (Periods 18–20)
   {
-    id: 19,
+    id: 18,
+    legacyIds: [19],
     wingId: 'E',
     wingTitle: 'Wing E · Project: Campus Connect',
     title: 'Project Overview: Campus Connect',
-    subtitle: 'An Intelligent Multilingual FAQ & Navigation Guide for VIT Vellore',
-    takeaway: 'Bridging the campus information gap: answers in 5 languages, live facility timings, and walking directions for new students.',
-    myTakeawayNote: 'Every freshman gets lost looking for TT, SJT, or the Health Center. Why not give them an assistant that speaks their language?',
+    subtitle: 'A Multilingual FAQ & Navigation Guide for VIT Vellore',
+    takeaway: 'Answers in 5 languages and one-tap walking directions for students on campus.',
+    myTakeawayNote: 'New students get lost looking for TT, SJT or PRP. An assistant that speaks their language helps.',
     cameraTarget: 'poster',
-    placeholderTags: ['[SOLO/TEAM]'],
     content: [
-      "Every year, thousands of new students arrive at VIT Vellore from all corners of India and abroad. The campus is vast (over 370 acres), building acronyms like SJT, TT, MB, and PRP are bewildering, and crucial administrative FAQs are buried inside PDFs or scattered circulars.",
-      "Our course project, Campus Connect, was conceived as an accessible, student-friendly assistant. Its tagline: 'Your multilingual guide to VIT Vellore: answers in five languages, live opening hours, and one-tap walking directions.'",
-      "Whether a student asks in Tamil about library borrowing hours, in Hindi about mess card replacement, or in English for directions to the Health Center, Campus Connect parses intent, extracts location entities, and delivers crisp, verified answers."
+      "VIT Vellore is a large campus, building names like SJT, TT, MB and PRP confuse new students, and useful FAQs are spread across circulars and PDFs.",
+      "Our course project, Campus Connect, is a student-friendly assistant. Its tagline: 'Your multilingual guide to VIT Vellore: answers in five languages, live opening hours and one-tap walking directions.'",
+      "A student can ask in English, Tamil, Telugu, Malayalam or Hindi, and Campus Connect works out what they are asking about and replies in the same language."
+    ]
+  },
+  {
+    id: 19,
+    legacyIds: [20, 21],
+    wingId: 'E',
+    wingTitle: 'Wing E · Project: Campus Connect',
+    title: 'Screenshots & Features',
+    subtitle: 'Real Screens, 11 Topics, Voice & Helplines',
+    takeaway: 'Real screenshots of the app, plus everything it can do.',
+    myTakeawayNote: 'The app always shows a sample-data notice, so students know to confirm with the VIT office.',
+    cameraTarget: 'laptop',
+    content: [
+      "These are real screenshots of Campus Connect on my phone: the home screen with topic tiles, directions to PRP opened in Google Maps, the helpline answer, the settings drawer, and an answer in Tamil.",
+      "Features: five languages with auto-match (English, தமிழ், తెలుగు, മലയാളം, हिन्दी), voice input and spoken replies, an 'I'm currently at' setting with auto-open maps, and 11 topics from Admissions to Health & Safety.",
+      "Helpline answers list 112 (all emergencies), 108 (ambulance), 181 (women's helpline) and 1800-180-5522 (anti-ragging), with a reminder that sample data should be confirmed with the official VIT office."
     ]
   },
   {
     id: 20,
+    legacyIds: [22],
     wingId: 'E',
     wingTitle: 'Wing E · Project: Campus Connect',
-    title: 'Screenshot Tour: The UI Flow',
-    subtitle: 'Home Chat, Category Drawer, Maps Route & Emergency Helplines',
-    takeaway: 'A clean mobile-first design built for fast triage under poor campus Wi-Fi conditions.',
-    myTakeawayNote: 'Designing for mobile means large touch targets, immediate visual fallback, and offline helpline access.',
-    cameraTarget: 'laptop',
+    title: 'Challenges & Lessons',
+    subtitle: 'What Was Hard & What I Learnt',
+    takeaway: 'Students type casually and mix languages, which breaks rigid matching rules.',
+    myTakeawayNote: 'Code-mixing (English with Tamil or Hindi) was the biggest hurdle.',
+    cameraTarget: 'desk',
     content: [
-      "Browse through our interface mockups below: Screen 1 shows the Welcome Home screen with curated topic tiles and quick suggestion chips. Screen 2 illustrates the multilingual switcher, toggling between English, Tamil, Telugu, Malayalam, and Hindi.",
-      "Screen 3 demonstrates our location-aware navigation: asking 'Where is Anna Auditorium?' returns walking distance, current gate access, and a direct Google Maps walking route link.",
-      "Screen 4 highlights our Emergency SOS panel, displaying verified one-tap contact cards for VIT Security, Ambulance, Women's Helpline, and Anti-Ragging officers."
+      "The biggest challenge was code-mixing. Students rarely ask 'What are the operational hours of the Central Library?'; they type 'library eppo close pannuvanga?' or 'hostel leave process kya hai?'.",
+      "Simple rule-based matching struggled with these, so the project needed better ways to match casual and mixed-language questions to the right answer."
     ]
   },
+
+  // WING F — STARS & PROJECT IDEAS (Periods 21–22)
   {
     id: 21,
-    wingId: 'E',
-    wingTitle: 'Wing E · Project: Campus Connect',
-    title: 'What Campus Connect Can Do',
-    subtitle: '11 Topic Categories, Multilingual Intent Matching & Safety SOS',
-    takeaway: '11 rich campus categories, speech input, GPS routing, and official verified emergency numbers.',
-    myTakeawayNote: 'Notice the honesty banner: campus regulations change, so we always advise double-checking with the Proctor Office!',
-    cameraTarget: 'poster',
-    placeholderTags: ['[CONFIRM numbers]'],
+    legacyIds: [23],
+    wingId: 'F',
+    wingTitle: 'Wing F · Stars & Project Ideas',
+    title: 'The Star Chart: 5 Classroom Stars',
+    subtitle: 'Stars From Our Faculty',
+    takeaway: 'Two stars for answering questions in class, three stars for my NLP application ideas.',
+    myTakeawayNote: 'Five stars over the semester, the best encouragement in the course.',
+    cameraTarget: 'starthart',
     content: [
-      "Campus Connect is packed with practical utility: 1) Five Languages with auto-detection (English, தமிழ், తెలుగు, മലയാളം, हिन्दी); 2) Voice input and spoken replies for hands-free navigation while walking between lectures.",
-      "3) 'I'm currently at' geolocation routing that opens direct pedestrian routes on Google Maps; 4) 11 comprehensive topic tiles spanning Admissions, Academics, Exams, Fees, Hostels, Library, Campus Services, Clubs, Careers, Getting Around, and Health & Safety.",
-      "5) One-tap Emergency SOS with verified helplines: National Police/Emergency 112, Medical Ambulance 108, Women's Helpline 181, and National Anti-Ragging 1800-180-5522. We also include an honest disclaimer reminding students that sample data must be confirmed with official VIT circulars."
+      "In Dr. SHARMILA BANU K mam's class, students earned stars for taking part.",
+      "Stars 1 & 2: mam asked questions in class, and I answered two of them.",
+      "Stars 3, 4 & 5: mam asked us to prepare an idea using an NLP application. I presented Outbreak Radar and a rumour detection idea, and mam gave 3 stars for them."
     ]
   },
   {
     id: 22,
-    wingId: 'E',
-    wingTitle: 'Wing E · Project: Campus Connect',
-    title: 'Challenges, Lessons & Links',
-    subtitle: 'What Broke, What We Fixed & Where the Project Goes Next',
-    takeaway: 'Building for diverse students taught us that colloquial phrasing breaks rigid regex rules every single time.',
-    myTakeawayNote: 'Code-mixing (mixing English and Tamil) was our biggest hurdle—and our most exciting learning curve.',
-    cameraTarget: 'desk',
-    placeholderTags: ['[MY EXPERIENCE]', '[LIVE DEMO URL]', '[GITHUB URL]'],
+    legacyIds: [24, 25],
+    wingId: 'F',
+    wingTitle: 'Wing F · Stars & Project Ideas',
+    title: 'My NLP Application Ideas',
+    subtitle: 'Rumour Detection & Outbreak Radar',
+    takeaway: 'Two ideas I presented in class: rumour detection for health alerts, and Outbreak Radar.',
+    myTakeawayNote: 'During a health scare, rumours spread fast. NLP can help sort facts from panic.',
+    cameraTarget: 'wall',
     content: [
-      "Our biggest engineering challenge was handling colloquial code-mixing. Students rarely ask 'What are the operational hours of the Central Library?'; they type 'Anna, library eppo close pannuvanga?' or 'Hostel leave approval process kya hai?'.",
-      "Rule-based regex matching failed miserably. We learned to implement phonetic transliteration normalization and intent classification using character n-grams and synonym clustering, which drastically improved query match rates.",
-      "Future milestones include direct integration with VTOP credentials, live shuttle tracking across campus, and offline SMS fallback. Check out our project repositories and documentation below!"
+      "Mam asked us to prepare an idea using an NLP application. I presented two:",
+      "Idea 1 — Rumour Detection (Nipah context): find hospital and place names in posts, and sort them into confirmed news, rumours and debunked claims.",
+      "Idea 2 — Outbreak Radar: read news reports of fever cases, pick out the town names, and link them with bus routes to show which nearby towns may need to stay alert. These are ideas, not finished systems."
     ]
   },
 
-  // WING F — STARS & OUTBREAK RADAR (Pages 23–25)
+  // WING G — CAT 2 (Period 23)
   {
     id: 23,
-    wingId: 'F',
-    wingTitle: 'Wing F · Stars & Outbreak Radar',
-    title: 'The Star Chart: 5 Classroom Stars',
-    subtitle: 'Recognized by Our Faculty for Active Discussion & Novel Ideas',
-    takeaway: 'Two starts for aswering questions in class, three stars for proposing the Outbreak Radar framework.',
-    myTakeawayNote: 'Five little gold stars drawn on the chalkboard next to my roll number—the best encouragement of the semester.',
-    cameraTarget: 'starthart',
-    placeholderTags: ['[MY STORY]'],
+    legacyIds: [26, 27],
+    wingId: 'G',
+    wingTitle: 'Wing G · CAT 2',
+    title: 'The CAT 2 Experience',
+    subtitle: 'The Exam & How I Prepared',
+    takeaway: 'CAT 2 tested understanding, not memorised definitions. Mam marked my answer to Question 1 as good.',
+    myTakeawayNote: 'An exam where you have to add new automaton transitions is scary and fun at once.',
+    cameraTarget: 'exampaper',
     content: [
-      "In Dr. SHARMILA BANU K mam's classroom, stars weren't given out for quietly taking notes. They were awarded when you stuck your neck out, challenged an assumption, or connected a theoretical NLP concept to a high-impact real-world crisis.",
-      "Stars 1 & 2 arrived in Week 4: I answered 2 questions asked in class by mam so i got 2 starts for answering questions",
-      "Stars 3, 4, & 5 arrived when presenting our Outbreak Radar concept: showing how NLP could parse regional newspaper reports and inter-district bus manifests during the Nipah and viral fever outbreaks to predict transmission corridors before official bulletins were issued."
+      "CAT 2 tested whether we understood how the topics work. In the derivational morphology question, the FSA was missing transitions for some words, and we had to explain where it blocked and add the right transitions.",
+      "Mam marked my answer to Question 1 as good.",
+      "To prepare, I drew the state machines by hand and ran small Python examples whenever a rule was confusing."
     ]
   },
+
+  // WING H — REFLECTION (Periods 24–25)
   {
     id: 24,
-    wingId: 'F',
-    wingTitle: 'Wing F · Stars & Outbreak Radar',
-    title: 'My Idea Board: Handwritten Brainstorms',
-    subtitle: 'Two NLP Innovations from My Class Notebook',
-    takeaway: 'Idea 1: Nipah virus rumour detection; Idea 2: Outbreak Radar combining text NLP with inter-city transport logs.',
-    myTakeawayNote: 'When disease spreads, rumours spread faster than the pathogen. NLP is the antidote to information panic.',
-    cameraTarget: 'wall',
+    legacyIds: [28, 29],
+    wingId: 'H',
+    wingTitle: 'Wing H · Reflection',
+    title: 'Timeline, Reflection & Thank-You',
+    subtitle: 'What I Learnt & A Note to Dr. SHARMILA BANU K mam',
+    takeaway: 'A semester of turning curiosity about text into real NLP skills.',
+    myTakeawayNote: 'To Dr. SHARMILA BANU K mam: thank you for your patience, the stars, and for making a hard subject feel welcoming.',
+    cameraTarget: 'blackboard',
     content: [
-      "These two sticky notes are pulled directly from the back pages of my classroom spiral pad:",
-      "IDEA 1 — Rumour Detection during Pandemics (Nipah Virus Context): Extracting hospital and locality entities from regional social media posts, running stance classification ('confirmed', 'speculation', 'debunked'), and filtering out false panic-inducing claims before they trigger hospital rushes.",
-      "IDEA 2 — Outbreak Radar: Combining NLP news surveillance with public transport corridor data. When regional news mentions fever clusters in a specific town, the model geo-parses bus routes leaving that depot to forecast which neighboring transit hubs face secondary transmission risk."
+      "The semester moved from the introduction to NLP, through text processing and hands-on coding in class, to morphology and FSAs, our NLP application ideas, and CAT 2.",
+      "Topics I learnt: regex tokenization and text cleaning, morphology and FSAs, n-gram language models, and NER and text classification.",
+      "Before this course I took language for granted. Now I notice ambiguity and morphology everywhere. Thank you, Mam, for answering every question, for the stars, and for making CSE3002 a course I enjoyed."
     ]
   },
   {
     id: 25,
-    wingId: 'F',
-    wingTitle: 'Wing F · Stars & Outbreak Radar',
-    title: 'Outbreak Radar, Explained Simply',
-    subtitle: 'Connecting News NER, Geo-Parsing & Transit Flow',
-    takeaway: 'A friendly, non-technical look at how text intelligence helps public health officials stay ahead of contagion.',
-    myTakeawayNote: 'You don\'t need complex deep neural networks to save lives—smart entity extraction and route mapping do the heavy lifting.',
-    cameraTarget: 'poster',
-    content: [
-      "Imagine an unusual cluster of fever cases reported in local newspapers across a district like Kozhikode or Vellore. Official health agency reports often take 5 to 7 days to consolidate. Local news blogs, clinic advisories, and community posts, however, mention them within hours.",
-      "Outbreak Radar uses NLP to listen to this public stream: 1) Medical NER identifies symptom clusters ('high fever', 'respiratory distress') and specific hospital clinics; 2) Geo-parsing extracts place names and correlates them with inter-district bus routes.",
-      "3) The system calculates a transit risk corridor, highlighting down-route bus stands where informational posters and mobile testing vans should be deployed proactively. Explore our animated illustrative simulation map below!"
-    ]
-  },
-
-  // WING G — EXAMS (Pages 26–27)
-  {
-    id: 26,
-    wingId: 'G',
-    wingTitle: 'Wing G · Exams',
-    title: 'The CAT 2 Experience',
-    subtitle: 'How Our Mam Tested Conceptual Understanding, Not Rote Memory',
-    takeaway: 'Our Continuous Assessment Test wasn’t a copy-paste regurgitation of lecture slides; it demanded authentic linguistic reasoning.',
-    myTakeawayNote: 'Walking into an exam where you actually have to invent new automaton transitions is both terrifying and exhilarating.',
-    cameraTarget: 'exampaper',
-    placeholderTags: ['[WHICH QUESTION]'],
-    content: [
-      "In many engineering courses, assessment papers reward memorizing slide definitions and reproducing static diagrams. Dr. SHARMILA BANU K mam's CAT 2 was an entirely different breed.",
-      "The paper tested whether we truly understood the computational mechanics of language. In the derivational morphology section, the given FSA deliberately omitted transitions for words like 'minimal' and 'revolutionary'—forcing us to explain where the automaton blocked and justify new state transitions.",
-      "On question 3 (Morphology & State Sequences), I carefully sketched the derivation paths and explained why the bound suffix '-al' required an adjectival transition branch. Mam wrote a handwritten 'Good!' in green ink next to my solution—a proud moment that validated all my late-night revision."
-    ]
-  },
-  {
-    id: 27,
-    wingId: 'G',
-    wingTitle: 'Wing G · Exams',
-    title: 'How I Prepared + Practice Quiz',
-    subtitle: 'Study Strategy, Common Pitfalls & 8-Question Assessment',
-    takeaway: 'My study formula: hand-draw FSAs on scrap paper, test regex edge-cases in Python, and practice with quick recall quizzes.',
-    myTakeawayNote: 'Don\'t just read an FSA—draw it with a pencil until state transitions become muscle memory.',
-    cameraTarget: 'desk',
-    placeholderTags: ['[MY STRATEGY]'],
-    content: [
-      "My preparation for NLP was built on three simple habits: First, drawing every state machine by hand on rough paper before checking the solution. Second, typing tricky sentence ambiguities into a live Python shell to see what spaCy or NLTK did with them.",
-      "Third, peer quizzes with benchmates right outside the TT food court before class. We would throw random words at each other ('antidisestablishmentarianism!') and trace the derivational morpheme breakdown on napkins.",
-      "Test your own readiness right now with this comprehensive 8-question practice quiz spanning tokenization, morphology, n-grams, and NER. Immediate explanations follow every question!"
-    ]
-  },
-
-  // WING H — REFLECTION (Pages 28–30)
-  {
-    id: 28,
-    wingId: 'H',
-    wingTitle: 'Wing H · Reflection',
-    title: 'Semester Timeline & Skills Gained',
-    subtitle: 'From Day 1 to CAT 2: My Learning Arc at VIT Vellore',
-    takeaway: 'A semester of growth: transforming raw text curiosity into tangible computational linguistic skills.',
-    myTakeawayNote: 'Looking back at my Week 1 notebook, I smile at how naive my regex rules were. We have come a very long way.',
-    cameraTarget: 'window',
-    placeholderTags: ['[DATES]'],
-    content: [
-      "Reflecting on the timeline of our semester reveals how each milestone naturally built upon the last: from our first introductory lecture on linguistic ambiguity, through hands-on Jupyter corpus sessions, our deep dive into the derivational FSA challenge, the pitch of Outbreak Radar, and the rigors of CAT 2.",
-      "Key competencies gained include: 1) Corpus preprocessing & regex text normalization; 2) Morphological decomposition & Finite State Automata design; 3) Statistical language modeling with n-grams; 4) Named Entity Recognition & intent triage; and 5) Multilingual UX design for campus tools.",
-      "More than the code, I developed an appreciation for the subtle nuances of how people express thoughts, ask for help, and converse in their native tongues."
-    ]
-  },
-  {
-    id: 29,
-    wingId: 'H',
-    wingTitle: 'Wing H · Reflection',
-    title: 'Reflection & Heartfelt Thank-You',
-    subtitle: 'What Changed in How I See Language & A Note to Dr. SHARMILA BANU K mam',
-    takeaway: 'A great teacher doesn\'t just deliver syllabus units; she sparks curiosity that spills out of the classroom into everyday life.',
-    myTakeawayNote: 'To Dr. SHARMILA BANU K mam: thank you for your patience, your chalk stars, and for making a complex field feel welcoming and fun.',
-    cameraTarget: 'blackboard',
-    placeholderTags: ["Dr. SHARMILA BANU K mam"],
-    content: [
-      "Before this course, I took language for granted. I assumed words were tidy containers for concepts, easily mapped into computer databases. Now, I notice ambiguity and morphology everywhere: in street hoardings, Tamil poetry, automated customer care bots, and speech transcription glitches.",
-      "This shift in perspective is entirely thanks to our faculty, Dr. SHARMILA BANU K mam. Her patience in answering every query, her encouragement whenever we stumbled in Jupyter labs, and her insistence on grounding theory in real human problems made CSE3002 my favorite course this semester.",
-      "Thank you, Mam, for making the classroom a place of lively debate, for pushing us to think beyond standard answers, and for believing in our project ideas. This portfolio is a tribute to your teaching."
-    ]
-  },
-  {
-    id: 30,
+    legacyIds: [30],
     wingId: 'H',
     wingTitle: 'Wing H · Reflection',
     title: 'Contact, Credits & Back to My Seat',
-    subtitle: 'Connect with Me, Open Source Credits & Classroom Easter Eggs',
-    takeaway: 'Thank you for taking a seat in our classroom! Let’s keep discussing language, code, and compassionate technology.',
+    subtitle: 'GitHub, Credits & Classroom Easter Eggs',
+    takeaway: 'Thank you for taking a seat in our classroom!',
     myTakeawayNote: 'Click the desk clock to ring the school bell, click the ceiling fan to spin it, or press S to scatter stars!',
     cameraTarget: 'desk',
-    placeholderTags: ['K.Hemashwaran', '23MID046', '[MY EMAIL]', '[LINKEDIN]', '[GITHUB]'],
     content: [
-      "Thank you for exploring all 30 periods of 'The Classroom View'! I hope this student-eye portfolio gave you a genuine feel for how we studied Natural Language Processing at VIT Vellore.",
-      "Connect with me: Email: [MY EMAIL] · LinkedIn: [LINKEDIN] · GitHub: [GITHUB]. All code for this portfolio is open-source and built with React, Vite, Tailwind CSS, and Framer Motion.",
-      "Typography credits: Patrick Hand & Caveat by Google Fonts, DM Sans by Colophon Foundry, JetBrains Mono by JetBrains. No copyrighted assets or stock photos were used; all illustrations are hand-crafted inline SVGs.",
-      "Before you leave, don't forget to test the classroom easter eggs: click the wall clock to ring the vintage bell, toggle the ceiling fan, switch between daytime lecture and evening desk lamp, or press 'S' on your keyboard to scatter stars across the room!"
+      "Thank you for exploring all 25 periods of 'The Classroom View'. I hope it gives a real feel for how we studied Natural Language Processing at VIT Vellore.",
+      "GitHub: github.com/Hemashwaran. This portfolio is built with React, Vite, Tailwind CSS and Framer Motion.",
+      "Typography credits: Patrick Hand & Caveat by Google Fonts, DM Sans by Colophon Foundry, JetBrains Mono by JetBrains. Illustrations are inline SVGs.",
+      "Before you leave, try the classroom easter eggs: click the wall clock to ring the bell, toggle the ceiling fan, switch between day and evening, or press 'S' to scatter stars."
     ]
   }
 ];
@@ -555,80 +463,6 @@ export const GLOSSARY_FLASHCARDS: Flashcard[] = [
   { id: '23', term: 'Language Model', category: 'Models & NER', definition: 'A probabilistic model estimating the likelihood of word sequences or predicting the next token.', example: 'P("processing" | "natural", "language")' },
   { id: '24', term: 'Named Entity Recognition (NER)', category: 'Models & NER', definition: 'Information extraction identifying proper names and classifying them into predefined types.', example: '"Vellore Institute of Technology" → ORGANIZATION' },
   { id: '25', term: 'Text Classification', category: 'Models & NER', definition: 'Assigning a document or sentence into one or more predefined semantic topic categories.', example: 'Classifying a student email as "Hostel Enquiry" or "Fee Issue"' },
-];
-
-export const CAT2_PRACTICE_QUIZ: QuizQuestion[] = [
-  {
-    id: 'q1',
-    question: 'In the word "unhappiness", what is the derivational suffix that changes the adjective into a noun?',
-    options: ['un-', 'happi', '-ness', '-ly'],
-    correctIndex: 2,
-    explanation: '"-ness" attaches to the adjective base "happy" to create the abstract noun "unhappiness". "un-" is a derivational prefix.'
-  },
-  {
-    id: 'q2',
-    question: 'Which of the following is an inflectional morpheme in English?',
-    options: ['-ation (creating nouns from verbs)', '-ly (creating adverbs from adjectives)', '-s (marking 3rd-person singular present tense)', '-ize (creating verbs from adjectives)'],
-    correctIndex: 2,
-    explanation: 'Inflectional morphemes only alter grammatical tense/aspect/number without changing word class. "-s" in "walks" is inflectional.'
-  },
-  {
-    id: 'q3',
-    question: 'In an FSA for derivational morphology, what does a double-circle state signify?',
-    options: ['Start state (q0)', 'Dead state / trap state', 'Accepting / final state indicating a valid word', 'Loop transition state'],
-    correctIndex: 2,
-    explanation: 'In automata theory, double circles denote accepting states where the input sequence forms a recognized, complete valid word.'
-  },
-  {
-    id: 'q4',
-    question: 'For the target word "Actually", which sequence of morphological transitions is taken from base root "act"?',
-    options: ['act (N/V) --ual--> q4 (Adj) --ly--> q7 (Adv)', 'act (N/V) --ize--> q1 --ation--> q2', 'act (N/V) --ness--> q6', 'act (N/V) --er--> q10'],
-    correctIndex: 0,
-    explanation: '"act" (root) + "-ual" derives "actual" (adjective), followed by suffix "-ly" deriving "actually" (adverb, an accepting state).'
-  },
-  {
-    id: 'q5',
-    question: 'What is the primary difference between Stemming and Lemmatization?',
-    options: [
-      'Stemming uses machine learning; lemmatization uses regex only.',
-      'Stemming chops suffixes heuristically (can produce non-words); lemmatization uses vocabulary and morphology to return true base forms.',
-      'Stemming works on sentences; lemmatization only works on characters.',
-      'There is no difference; they are exact synonyms.'
-    ],
-    correctIndex: 1,
-    explanation: 'Stemming (like Porter Stemmer) strips suffixes by rules ("running" → "run", "studies" → "studi"). Lemmatization uses morphological dictionaries to return valid base lemmas ("better" → "good").'
-  },
-  {
-    id: 'q6',
-    question: 'In a Bigram Language Model, how is the probability P("Processing" | "Language") computed using Maximum Likelihood?',
-    options: [
-      'Count("Processing") / Count("Language")',
-      'Count("Language Processing") / Count("Language")',
-      'Count("Language Processing") / Total Word Count',
-      'Count("Language") / Count("Processing")'
-    ],
-    correctIndex: 1,
-    explanation: 'Conditional probability in bigram models is the frequency of the word pair divided by the frequency of the conditioning word: Count(w1, w2) / Count(w1).'
-  },
-  {
-    id: 'q7',
-    question: 'Which NLP task is essential for extracting hospital names and outbreak locations from news reports in our Outbreak Radar project?',
-    options: ['Part-of-Speech Tagging', 'Stemming', 'Named Entity Recognition (NER)', 'Stop-word filtering'],
-    correctIndex: 2,
-    explanation: 'Named Entity Recognition specifically identifies and tags entity spans like LOCATION, ORGANIZATION, and MEDICAL facilities.'
-  },
-  {
-    id: 'q8',
-    question: 'Why do Indian languages like Tamil and Telugu present unique challenges for simple FSA derivational models?',
-    options: [
-      'They have no grammatical rules.',
-      'They are agglutinative languages where multiple affixes and case markers can chain together onto a single root.',
-      'They cannot be represented in Unicode.',
-      'They do not use nouns or verbs.'
-    ],
-    correctIndex: 1,
-    explanation: 'Agglutinative languages chain multiple morphemes into single long words (e.g., root + derivative + plural + case marker + honorific), requiring recursive or looping FSA structures.'
-  }
 ];
 
 export const MOTHER_TONGUE_EXAMPLES = [
@@ -689,7 +523,7 @@ export const FSA_EXAM_WORDS = [
     path: ['q0 (Start)', 'q0 → q4 via "-al" [AUGMENTED TRANSITION]', 'q4 (Accepting State: Adjective)'],
     augmented: true,
     augmentedNote: 'Original classroom FSA lacked direct -al branch from q0. Added transition: q0 --al--> q4.',
-    verifiedTag: '[VERIFY MY ANSWER]'
+    verifiedTag: ''
   },
   {
     id: 'b',
@@ -700,7 +534,7 @@ export const FSA_EXAM_WORDS = [
     path: ['q0 (Start: nature)', 'q0 → q4 via "-al" (natural)', 'q4 → q1 via "-ize" (naturalize)', 'q1 → q2 via "-ation" (naturalization: Accepting Noun)'],
     augmented: false,
     augmentedNote: 'Follows standard derivational chain: Noun root to Adjective to Verb to Abstract Noun.',
-    verifiedTag: '[VERIFY MY ANSWER]'
+    verifiedTag: ''
   },
   {
     id: 'c',
@@ -711,7 +545,7 @@ export const FSA_EXAM_WORDS = [
     path: ['q0 (Start: spontaneous)', 'q0 → q6 via "-ness" [Direct Adjective to Noun transition]', 'q6 (Accepting State: Noun)'],
     augmented: false,
     augmentedNote: 'The suffix -ness productively attaches directly to the adjective base to yield the state noun.',
-    verifiedTag: '[VERIFY MY ANSWER]'
+    verifiedTag: ''
   },
   {
     id: 'd',
@@ -722,7 +556,7 @@ export const FSA_EXAM_WORDS = [
     path: ['q0 (Start: act)', 'q0 → q4 via "-ual" (actual: Adj)', 'q4 → q7 via "-ly" (actually: Accepting Adverb)'],
     augmented: true,
     augmentedNote: 'Treated "-ual" as allomorph of adjectival "-al" entering q4, then traversed q4 --ly--> q7.',
-    verifiedTag: '[VERIFY MY ANSWER]'
+    verifiedTag: ''
   },
   {
     id: 'e',
@@ -733,6 +567,6 @@ export const FSA_EXAM_WORDS = [
     path: ['q0 (Start: revolution)', 'q0 → q8 via "-ary" [AUGMENTED TRANSITION]', 'q8 (Accepting State: Adjective)'],
     augmented: true,
     augmentedNote: 'Original FSA had -ive/-ative for adjectives; augmented with -ary transition q0 --ary--> q8.',
-    verifiedTag: '[VERIFY MY ANSWER]'
+    verifiedTag: ''
   }
 ];

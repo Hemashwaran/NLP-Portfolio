@@ -14,34 +14,34 @@ export const WingReflection: React.FC<WingReflectionProps> = ({ period, onReturn
   // Period 28: Chalk Timeline Milestones
   const timelineMilestones = [
     {
-      week: "Week 1",
+      week: "Start",
       datePlaceholder: "",
-      title: "First Lecture: Ambiguity in Human Language",
-      desc: "Stepping into prp floor. Mam framed NLP not as formula memorization, but as solving linguistic ambiguity across Indian contexts."
+      title: "Introduction to NLP",
+      desc: "What NLP is, the levels of language, and why ambiguity makes language hard for computers."
     },
     {
-      week: "Week 3",
+      week: "Basics",
       datePlaceholder: "",
-      title: "Hands-on Jupyter: Tokenization & Regex",
-      desc: "Building custom tokenizers on actual student query circulars. Overcoming broken contractions and emoji tokens."
+      title: "Text Processing & Hands-on Coding",
+      desc: "Tokenization, normalization, stop words and regex, with small coding exercises in class."
     },
     {
-      week: "Week 5",
+      week: "Morphology",
       datePlaceholder: "",
-      title: "The Derivational Morphology Challenge",
-      desc: "Dissecting roots and derivational affixes. Writing state machines from q0 to q11 on the chalkboard."
+      title: "Morphology & FSA",
+      desc: "Roots and affixes, inflection vs derivation, and modelling derivations with finite state automata."
     },
     {
-      week: "Week 8",
+      week: "Ideas",
       datePlaceholder: "",
-      title: "Project Pitch: Campus Connect & Radar",
-      desc: "Presenting our multilingual campus guide and our outbreak transmission concept. Earned our 5 classroom stars!"
+      title: "NLP Application Ideas",
+      desc: "Presented Outbreak Radar and a rumour detection idea. Mam gave 3 stars for them."
     },
     {
-      week: "Week 11",
+      week: "CAT 2",
       datePlaceholder: "",
-      title: "CAT 2 Exam: Derivational FSA Solution",
-      desc: "Solving the 10-mark FSA alteration question with augmented transitions, receiving mam's handwritten green 'Good!' remark."
+      title: "CAT 2 Exam",
+      desc: "Mam marked my answer to Question 1 as good."
     }
   ];
 
@@ -53,17 +53,16 @@ export const WingReflection: React.FC<WingReflectionProps> = ({ period, onReturn
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
             <div>
               <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-gold/20 text-gold border border-gold/30">
-                Period 28 · Semester Timeline
+                Period 24 · Semester Timeline
               </span>
               <h2 className="text-2xl font-bold font-chalk text-chalk mt-1">
                 Semester Timeline & Technical Competencies
               </h2>
             </div>
-            <PlaceholderBadge label="[DATES]" field="Lecture Calendar Dates" />
           </div>
 
           <p className="text-sm text-chalk/80 leading-relaxed mb-6">
-            From our very first introductory discussion on linguistic ambiguity to the rigors of CAT 2, here is how each semester milestone built toward end-to-end language understanding:
+            How the semester moved, from the first lecture to CAT 2:
           </p>
 
           {/* Horizontal / Vertical Timeline Flow */}
@@ -89,13 +88,13 @@ export const WingReflection: React.FC<WingReflectionProps> = ({ period, onReturn
           {/* Core Skills Gained Summary */}
           <div className="mt-6 p-4 rounded-xl bg-chalkboard-dark border border-gold/30 space-y-2">
             <span className="text-xs font-mono font-bold text-gold uppercase tracking-wider block">
-              Core Skills Acquired This Semester:
+              Topics I Learnt This Semester:
             </span>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-mono text-chalk/90 pt-1">
               <div className="p-2 rounded bg-black/30 border border-chalk/10">• Regex Tokenization</div>
-              <div className="p-2 rounded bg-black/30 border border-chalk/10">• FSA State Minimization</div>
+              <div className="p-2 rounded bg-black/30 border border-chalk/10">• Morphology & FSA</div>
               <div className="p-2 rounded bg-black/30 border border-chalk/10">• Bigram Language Models</div>
-              <div className="p-2 rounded bg-black/30 border border-chalk/10">• Custom NER Pipelines</div>
+              <div className="p-2 rounded bg-black/30 border border-chalk/10">• NER & Text Classification</div>
             </div>
           </div>
         </div>
@@ -111,7 +110,7 @@ export const WingReflection: React.FC<WingReflectionProps> = ({ period, onReturn
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-chalk/20 pb-4 mb-6">
             <div>
               <span className="px-2.5 py-0.5 rounded text-xs font-mono font-bold bg-gold/20 text-gold border border-gold/30">
-                Period 29 · Student Reflection
+                Period 24 · Student Reflection
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold font-chalk text-chalk mt-1">
                 Reflection & Heartfelt Letter to Dr. SHARMILA BANU K mam
@@ -187,7 +186,7 @@ export const WingReflection: React.FC<WingReflectionProps> = ({ period, onReturn
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
           <div>
             <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-gold/20 text-gold border border-gold/30">
-              Period 30 · Graduation & Departure
+              Period 25 · Contact & Credits
             </span>
             <h2 className="text-2xl font-bold font-chalk text-chalk mt-1">
               Contact, Project Credits & Classroom Easter Eggs
@@ -203,44 +202,21 @@ export const WingReflection: React.FC<WingReflectionProps> = ({ period, onReturn
         </div>
 
         <p className="text-sm text-chalk/80 leading-relaxed mb-6">
-          Thank you for spending these 30 periods sitting in my desk! Connect with me to discuss natural language processing, Indian language technologies, and compassionate computing:
+          Thank you for spending these 25 periods at my desk! You can find my work on GitHub:
         </p>
 
         {/* Contact Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+        <div className="grid grid-cols-1 gap-3 mb-6">
           <a
-            href="mailto:placeholder@vitstudent.ac.in"
-            onClick={(e) => { e.preventDefault(); alert("Email: [MY EMAIL] placeholder"); }}
-            className="p-4 rounded-xl bg-black/40 border border-chalk/15 hover:border-gold/50 transition-colors flex items-center gap-3 group"
-          >
-            <Mail className="w-5 h-5 text-gold group-hover:scale-110 transition-transform" />
-            <div>
-              <span className="text-xs text-chalk/60 font-mono block">Direct Email</span>
-              <span className="font-bold text-xs text-chalk"><PlaceholderBadge label="[MY EMAIL]" /></span>
-            </div>
-          </a>
-
-          <a
-            href="https://linkedin.com"
-            onClick={(e) => { e.preventDefault(); alert("LinkedIn: [LINKEDIN] placeholder"); }}
-            className="p-4 rounded-xl bg-black/40 border border-chalk/15 hover:border-gold/50 transition-colors flex items-center gap-3 group"
-          >
-            <Linkedin className="w-5 h-5 text-chalk-blue group-hover:scale-110 transition-transform" />
-            <div>
-              <span className="text-xs text-chalk/60 font-mono block">LinkedIn Profile</span>
-              <span className="font-bold text-xs text-chalk"><PlaceholderBadge label="[LINKEDIN]" /></span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com"
-            onClick={(e) => { e.preventDefault(); alert("GitHub: [GITHUB] placeholder"); }}
+            href="https://github.com/Hemashwaran"
+            target="_blank"
+            rel="noreferrer"
             className="p-4 rounded-xl bg-black/40 border border-chalk/15 hover:border-gold/50 transition-colors flex items-center gap-3 group"
           >
             <Github className="w-5 h-5 text-chalk-green group-hover:scale-110 transition-transform" />
             <div>
-              <span className="text-xs text-chalk/60 font-mono block">GitHub Repos</span>
-              <span className="font-bold text-xs text-chalk"><PlaceholderBadge label="[GITHUB]" /></span>
+              <span className="text-xs text-chalk/60 font-mono block">GitHub</span>
+              <span className="font-bold text-xs text-chalk">github.com/Hemashwaran</span>
             </div>
           </a>
         </div>

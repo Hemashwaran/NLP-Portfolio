@@ -32,4 +32,5 @@ export interface PageData {
   content: string[]; // 100-250 words per page
   metaTags?: string[];
   placeholderTags?: string[];
+  legacyIds?: number[]; // original page ids whose interactive blocks render on this period
 }

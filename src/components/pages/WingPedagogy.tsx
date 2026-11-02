@@ -19,31 +19,31 @@ export const WingPedagogy: React.FC<WingPedagogyProps> = ({ period }) => {
   const applications = [
     {
       id: 1,
-      theory: "Morphological Analysis & Stemming",
-      subTheory: "Roots, inflectional suffixes, lemmatization dictionaries",
-      app: "Search Engines & E-Commerce Autocorrect",
-      realWorld: "When a shopper queries 'running shoes size 10', the engine stems 'running' to 'run' and matches 'runner shoe'. Without morphology, exact string matching fails on 40% of queries."
+      theory: "Morphology & Stemming",
+      subTheory: "Roots, suffixes, stemming and lemmatization",
+      app: "Search & Autocorrect",
+      realWorld: "When you search 'running shoes', a search engine can reduce 'running' to 'run' so it also finds pages that say 'run' or 'runs'."
     },
     {
       id: 2,
       theory: "Named Entity Recognition (NER)",
-      subTheory: "Sequence labeling with BIO tags (B-LOC, I-LOC, B-HOSP)",
-      app: "Epidemic Surveillance & Crisis Tracking",
-      realWorld: "Scanning regional newspapers in local languages to automatically extract hospital clinic locations, fever clusters, and affected districts days before government bulletins publish."
+      subTheory: "Finding names of people, places, dates and organisations in text",
+      app: "Information Extraction",
+      realWorld: "Pulling out places, dates and organisations from news articles or messages so they can be searched and sorted automatically."
     },
     {
       id: 3,
-      theory: "Text Classification & Stance Detection",
-      subTheory: "Naive Bayes, TF-IDF, fine-tuned transformer encoders",
-      app: "Misinformation & WhatsApp Rumour Filtering",
-      realWorld: "Classifying viral student forwards into 'Verified Official Circular', 'Hostel Rumour', or 'Malicious Spam' to prevent campus panics during storm warnings."
+      theory: "Text Classification",
+      subTheory: "Sorting text into categories using features like word counts",
+      app: "Spam & Rumour Filtering",
+      realWorld: "Email spam filters and message filters decide whether a piece of text is normal, spam, or misleading."
     },
     {
       id: 4,
-      theory: "Speech Phonetics & Acoustic Modeling",
-      subTheory: "Phonemes, formant transitions, mel-spectrograms",
-      app: "Multilingual Indian Voice Assistants",
-      realWorld: "Powering voice-activated campus kiosks that understand code-mixed spoken requests in Tamil-accented English or Telugu colloquial terms."
+      theory: "N-gram Language Models",
+      subTheory: "Predicting the next word from the words before it",
+      app: "Keyboard Next-Word Suggestions",
+      realWorld: "Phone keyboards suggest the next word based on which words usually follow the ones you have typed."
     }
   ];
 
@@ -63,51 +63,49 @@ export const WingPedagogy: React.FC<WingPedagogyProps> = ({ period }) => {
   const labs = [
     {
       id: 1,
-      title: "Lab 1: Tokenization & Normalization on Campus Corpus",
-      placeholder: "[LAB 1]",
-      code: `# Lab 1: Cleaning raw VIT student feedback corpus
+      title: "Hands-on 1: Tokenizing Text",
+      placeholder: "Hands-on 1",
+      code: `# Splitting raw text into tokens with a regular expression
 import re
 
-raw_corpus = """
+raw_text = """
 TT Library opens at 8:00 AM! Please don't leave bags unattended.
 Visit http://vtop.vit.ac.in for hall tickets (CAT-2).
 """
 
-# Regex Tokenizer preserving course codes and URLs
-tokens = re.findall(r'(?:https?://\S+)|(?:\w+[-\w]*)|[^\w\s]', raw_corpus)
-print(f"Total tokens extracted: {len(tokens)}")
+tokens = re.findall(r'(?:https?://\\S+)|(?:\\w+[-\\w]*)|[^\\w\\s]', raw_text)
+print(f"Total tokens: {len(tokens)}")
 print(f"Sample tokens: {tokens[:8]}")`,
-      output: `Total tokens extracted: 23
+      output: `Total tokens: 26
 Sample tokens: ['TT', 'Library', 'opens', 'at', '8', ':', '00', 'AM']`,
-      learning: "Writing custom regex tokenizers taught us how naive split(' ') breaks on URLs, timestamps ('8:00 AM'), and hyphenated course codes."
+      learning: "A plain split(' ') breaks on URLs, times like '8:00 AM' and words like 'CAT-2'. A regex tokenizer handles them better."
     },
     {
       id: 2,
-      title: "Lab 2: Bigram Language Modeling & Predictor",
-      placeholder: "[LAB 2]",
-      code: `# Lab 2: Bigram conditional frequency distributions
+      title: "Hands-on 2: Counting N-grams",
+      placeholder: "Hands-on 2",
+      code: `# Bigram counts and probabilities
 from collections import Counter
 
-corpus = "natural language processing is exciting language processing helps students"
-words = corpus.split()
+words = "natural language processing is exciting language processing helps students".split()
 bigrams = list(zip(words[:-1], words[1:]))
 
-# Count occurrences
+unigram_counts = Counter(words[:-1])
 bigram_counts = Counter(bigrams)
-print("Top Bigram pairs:")
-for pair, count in bigram_counts.most_common(3):
-    print(f"P({pair[1]} | {pair[0]}) = {count}/2 = {count/2:.2f}")`,
-      output: `Top Bigram pairs:
-P(processing | language) = 2/2 = 1.00
-P(language | natural) = 1/2 = 0.50
+for (w1, w2), count in bigram_counts.most_common(3):
+    print(f"P({w2} | {w1}) = {count}/{unigram_counts[w1]} = {count/unigram_counts[w1]:.2f}")`,
+      output: `P(processing | language) = 2/2 = 1.00
+P(language | natural) = 1/1 = 1.00
 P(is | processing) = 1/2 = 0.50`,
-      learning: "We experienced how bigram transition probabilities compute autocomplete suggestions, and how zero-frequency combinations need smoothing."
+      learning: "Bigram probability is Count(w1, w2) / Count(w1). This is the basic idea behind next-word suggestions."
     },
     {
       id: 3,
-      title: "Lab 3: Derivational Suffix Stripping & Regex Stemmer",
-      placeholder: "[LAB 3]",
-      code: `# Lab 3: Rule-based derivational morphology parser
+      title: "Hands-on 3: Stripping Suffixes",
+      placeholder: "Hands-on 3",
+      code: `# A simple rule-based suffix stripper
+import re
+
 def derive_stem(word):
     rules = [
         (r'ational$', 'ate'),
@@ -120,64 +118,28 @@ def derive_stem(word):
             return re.sub(pattern, repl, word), pattern
     return word, "No suffix rule matched"
 
-test_words = ["naturalization", "minimal", "spontaneousness"]
-for w in test_words:
+for w in ["naturalization", "minimal", "spontaneousness"]:
     stem, rule = derive_stem(w)
     print(f"{w} -> {stem} (via {rule})")`,
       output: `naturalization -> naturalize (via ization$)
 minimal -> minim (via al$)
 spontaneousness -> spontaneous (via ness$)`,
-      learning: "Direct preparation for our CAT 2 FSA question! Hand-coding morphological suffix rules revealed why simple heuristics over-stem irregular roots."
+      learning: "Suffix rules connect directly to derivational morphology, and show why simple rules can cut a word down to a non-word like 'minim'."
     }
   ];
 
   // Page 7: Mother tongue
   const [selectedLangIndex, setSelectedLangIndex] = useState(0);
 
-  // Page 8: Class memories
-  const classMemories = [
+  // Page 8: Stars earned in class
+  const starMoments = [
     {
-      title: "The Great 'Apple' Ambiguity Debate",
-      detail: "During our Week 3 lecture on lexical polysemy, the class spent 15 minutes debating how a parser knows whether 'Apple' in 'Apple fell on Newton' is a fruit vs company. Mam challenged us to define a minimum window size of context words."
+      title: "2 Stars: Answering Questions in Class",
+      detail: "Mam asked questions during class, and I answered two of them. She gave me a star for each answer."
     },
     {
-      title: "Chalkboard FSA Marathon",
-      detail: "Before CAT 2, mam invited four students up to the board to simultaneously trace state transitions for 'antidisestablishmentarianism'. Seeing 14 states drawn in different colored chalk made the whole row cheer."
-    },
-    {
-      title: "The Mother Tongue Epiphany",
-      detail: "When a classmate was confused by agglutinative recursion, mam asked him to translate 'in my school' into Malayalam ('എന്റെ സ്കൂളിൽ'). The case ending '-il' made bound morphemes instantly crystal clear."
-    },
-    {
-      title: "Laptop Screen Crash & Live Recovery",
-      detail: "A student’s regex script went into an infinite backtracking loop during Lab 2. Instead of scolding, mam projected the code onto the screen to teach the entire class about catastrophic backtracking in regular expressions."
-    },
-    {
-      title: "Pitching Outbreak Radar",
-      detail: "Presenting the idea of tracking virus transmission corridors by linking local newspaper NER with inter-district bus depots. Mam awarded us 3 gold stars on her podium diary right there."
-    },
-    {
-      title: "Green Ink 'Good!' on CAT 2",
-      detail: "Getting my graded CAT 2 script back with a handwritten 'Good!' next to my adjectival derivational suffix derivation. It felt like winning a championship after days of drawing FSAs."
-    }
-  ];
-
-  const mamQuotes = [
-    {
-      quote: "Don't let your code pretend it understands language if you are merely matching substrings.",
-      context: "During our regex tokenization lab, warning us against naive text filters."
-    },
-    {
-      quote: "If you cannot parse it with a pencil on rough paper, no deep learning library will save you.",
-      context: "Emphasizing the foundational importance of drawing syntax trees and FSA states by hand."
-    },
-    {
-      quote: "Language is alive. Every time a new meme or slang emerges, our tokenizers have to adapt.",
-      context: "Explaining out-of-vocabulary (OOV) tokens and subword tokenization algorithms."
-    },
-    {
-      quote: "In India, our greatest NLP superpower is our multilingual intuition. Use it!",
-      context: "Encouraging us to test our morphological models against our regional mother tongues."
+      title: "3 Stars: NLP Application Ideas",
+      detail: "Mam asked us to prepare an idea using an NLP application. I presented two ideas, Outbreak Radar and a rumour detection idea, and mam gave 3 stars for them."
     }
   ];
 
@@ -189,14 +151,13 @@ spontaneousness -> spontaneous (via ness$)`,
             <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-gold/20 text-gold border border-gold/30">
               Period 5 · Pedagogy
             </span>
-            <PlaceholderBadge label="[CONFIRM which were discussed]" field="Theory Application Pairs" />
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-bold font-chalk text-chalk mb-2">
             Learning Through Real Applications
           </h2>
           <p className="text-sm text-chalk/80 leading-relaxed mb-6">
-            <PlaceholderBadge label="Dr. SHARMILA BANU K mam" /> never taught theoretical formulas in isolation. Every concept was grounded in an application we interact with on our phones daily. Click any card below to flip between theory and its real-world engineering counterpart!
+            Each topic we learnt in class connects to something we use every day. Click a card to flip between the topic and where it shows up in real apps.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -252,25 +213,16 @@ spontaneousness -> spontaneous (via ness$)`,
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
             <div>
               <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-chalk-yellow/20 text-chalk-yellow border border-chalk-yellow/30">
-                Period 6 · Hands-On Lab
+                Period 6 · Hands-On in Class
               </span>
               <h2 className="text-2xl font-bold font-chalk text-chalk mt-1">
-                Hands-On with a Corpus (Jupyter Notebook)
+                Hands-On Coding in Class
               </h2>
             </div>
-            <a
-              href="#notebook-link"
-              onClick={(e) => { e.preventDefault(); alert("Notebook link: [NOTEBOOK / GITHUB LINK] placeholder"); }}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/40 hover:bg-black/60 text-xs text-chalk font-mono border border-chalk/20 transition-colors self-start"
-            >
-              <Terminal className="w-3.5 h-3.5 text-gold" />
-              <span><PlaceholderBadge label="[NOTEBOOK / GITHUB LINK]" /></span>
-              <ExternalLink className="w-3 h-3 text-chalk/50" />
-            </a>
           </div>
 
           <p className="text-sm text-chalk/80 leading-relaxed mb-4">
-            Classroom slides only take you so far. Mam had us boot up Jupyter on our laptops to test algorithms against actual text. Switch between our 3 core lab modules below and run the cells!
+            We didn't have a separate lab, but mam made us write small pieces of code in class, like tokenizing text and counting n-grams. Here are simple versions of what we practised. Switch between them and run the cell.
           </p>
 
           {/* Lab Selector Tabs */}
@@ -285,7 +237,7 @@ spontaneousness -> spontaneous (via ness$)`,
                   }`}
               >
                 <span>{lab.placeholder}</span>
-                <span className="hidden sm:inline">· {lab.title.split(':')[0]}</span>
+                <span className="hidden sm:inline">· {lab.title.split(': ')[1]}</span>
               </button>
             ))}
           </div>
@@ -298,7 +250,7 @@ spontaneousness -> spontaneous (via ness$)`,
                 <span className="w-3 h-3 rounded-full bg-red-500/80 inline-block" />
                 <span className="w-3 h-3 rounded-full bg-yellow-500/80 inline-block" />
                 <span className="w-3 h-3 rounded-full bg-green-500/80 inline-block" />
-                <span className="font-mono text-gray-400 ml-2">jupyter_lab_session_{curLab.id}.ipynb</span>
+                <span className="font-mono text-gray-400 ml-2">hands_on_{curLab.id}.py</span>
               </div>
               <button
                 onClick={() => handleRunCell(curLab.id)}
@@ -314,7 +266,7 @@ spontaneousness -> spontaneous (via ness$)`,
             <div className="p-4 font-mono text-xs text-gray-200 overflow-x-auto space-y-1">
               <div className="text-gray-500 font-semibold mb-2 flex items-center gap-2">
                 <span>In [{executedCells[curLab.id] ? curLab.id : ' '}]:</span>
-                <span className="text-gray-400 text-[11px] font-sans"># Python 3.11 (NLP Kernel)</span>
+                <span className="text-gray-400 text-[11px] font-sans"># Python 3</span>
               </div>
               <pre className="text-chalk-blue leading-relaxed">{curLab.code}</pre>
             </div>
@@ -332,7 +284,7 @@ spontaneousness -> spontaneous (via ness$)`,
           <div className="mt-4 p-3.5 rounded-xl bg-black/40 border border-gold/30 text-xs text-chalk/90 flex items-start gap-2.5">
             <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />
             <div>
-              <span className="font-bold text-gold mr-1">What I Learned from {curLab.placeholder}:</span>
+              <span className="font-bold text-gold mr-1">What I learnt:</span>
               <span>{curLab.learning}</span>
             </div>
           </div>
@@ -350,7 +302,6 @@ spontaneousness -> spontaneous (via ness$)`,
             <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-chalk-blue/20 text-chalk-blue border border-chalk-blue/30">
               Period 7 · Multilingual Intuition
             </span>
-            <PlaceholderBadge label="[REVIEW BY NATIVE SPEAKER]" field="Regional Language Check" />
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-bold font-chalk text-chalk mb-2">
@@ -429,72 +380,38 @@ spontaneousness -> spontaneous (via ness$)`,
     );
   }
 
-  // Period 8: Class Moments & Stars System
+  // Period 8: Stars earned in class
   return (
     <div className="space-y-6">
       <div className="p-6 rounded-2xl bg-chalkboard-light/60 border border-chalk/15 shadow-xl">
         <div className="flex items-center justify-between mb-2">
           <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-gold/20 text-gold border border-gold/30 flex items-center gap-1">
             <Star className="w-3.5 h-3.5 fill-gold" />
-            Period 8 · Star System & Moments
+            Period 8 · Stars in Class
           </span>
-          <PlaceholderBadge label="[MY MEMORIES]" field="Personal Memories" />
         </div>
 
         <h2 className="text-2xl sm:text-3xl font-bold font-chalk text-chalk mb-2">
-          Class Moments & The Stars System
+          The Stars System
         </h2>
         <p className="text-sm text-chalk/80 leading-relaxed mb-6">
-          In Dr. SHARMILA BANU K mam's classroom, active questions were celebrated. Sharp insights earned gold stars on her podium register. Here are 6 memorable moments and 4 phrases that stuck with me.
+          In Dr. SHARMILA BANU K mam's class, students earned stars for taking part. I earned 5 stars over the semester.
         </p>
 
-        {/* 6 Class Memories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          {classMemories.map((mem, idx) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {starMoments.map((mem, idx) => (
             <div
               key={idx}
-              className="p-4 rounded-xl bg-black/40 border border-chalk/15 hover:border-gold/40 transition-colors flex flex-col justify-between"
+              className="p-4 rounded-xl bg-black/40 border border-chalk/15 hover:border-gold/40 transition-colors"
             >
-              <div>
-                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-gold block mb-1">
-                  Memory #{idx + 1}
-                </span>
-                <h4 className="font-bold text-sm text-chalk mb-2 font-chalk text-base">
-                  {mem.title}
-                </h4>
-                <p className="text-xs text-chalk/75 leading-relaxed">
-                  {mem.detail}
-                </p>
-              </div>
-              <div className="pt-2 mt-3 border-t border-chalk/10 text-[10px] text-chalk/50 font-mono">
-                VIT prp Class Session
-              </div>
+              <h4 className="font-bold text-chalk mb-2 font-chalk text-base">
+                {mem.title}
+              </h4>
+              <p className="text-xs text-chalk/75 leading-relaxed">
+                {mem.detail}
+              </p>
             </div>
           ))}
-        </div>
-
-        {/* Things Mam Said That Stuck With Me */}
-        <div className="p-5 rounded-xl bg-chalkboard-dark border border-chalk/20">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-bold font-chalk text-gold flex items-center gap-2">
-              <MessageSquare className="w-4 h-4 text-gold" />
-              Things Mam Said That Stuck With Me
-            </h3>
-            <PlaceholderBadge label="[MY WORDS]" field="Faculty Quotes" />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {mamQuotes.map((q, idx) => (
-              <div key={idx} className="p-3.5 rounded-lg bg-black/30 border border-chalk/10">
-                <blockquote className="text-xs font-chalk text-chalk-yellow text-sm leading-snug mb-1">
-                  "{q.quote}"
-                </blockquote>
-                <span className="text-[11px] text-chalk/60 block font-sans">
-                  — Context: {q.context}
-                </span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ export const KEY_TERMS: Record<string, TermDefinition> = {
   ner: {
     term: "Named Entity Recognition (NER)",
     definition: "A sequence labeling task that locates and categorizes entities in unstructured text into predefined classes (PERSON, ORG, LOC, TIME).",
-    example: "\"Dr. Rao visited CMC Vellore on Monday\" → CMC Vellore: LOCATION / HOSPITAL"
+    example: "\"The Central Library at VIT Vellore\" → Central Library: LOCATION"
   },
   stemming: {
     term: "Stemming",

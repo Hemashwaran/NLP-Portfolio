@@ -37,72 +37,6 @@ export const WingFSA: React.FC<WingFSAProps> = ({ period }) => {
     setIsAutoPlaying(false);
   };
 
-  // Page 18: 5-Question FSA Mini Quiz
-  const fsaQuizQuestions = [
-    {
-      q: "Why are accepting states in an FSA drawn with a double circle?",
-      options: [
-        "They represent intermediate error states",
-        "They denote that the input character sequence forms a valid, complete word in the lexicon",
-        "They show loops that consume zero characters",
-        "They are the starting entry points for prefixes"
-      ],
-      correct: 1,
-      exp: "In formal automata theory, double circles mark final/accepting states where the machine halts successfully."
-    },
-    {
-      q: "In 'minimal', what part of speech does the derivational suffix '-al' generate?",
-      options: ["Noun", "Adverb", "Adjective", "Verb"],
-      correct: 2,
-      exp: "The bound derivational morpheme '-al' attaches to roots or nouns to create adjectives (e.g., origin → original, minim → minimal)."
-    },
-    {
-      q: "In the word 'naturalization', which state sequence correctly traces the chain of derivations?",
-      options: [
-        "Noun (nature) → Adj (natural) → Verb (naturalize) → Noun (naturalization)",
-        "Verb → Adverb → Noun → Adjective",
-        "Noun → Verb → Adverb → Adjective",
-        "Adjective → Noun → Verb → Preposition"
-      ],
-      correct: 0,
-      exp: "Root 'nature' (N) takes '-al' to become adjective 'natural', then '-ize' to become verb 'naturalize', then '-ation' to become abstract noun 'naturalization'."
-    },
-    {
-      q: "Why did the original classroom FSA require an augmented transition for 'actually'?",
-      options: [
-        "Because English adverbs can never be derived by FSAs",
-        "Because it required traversing from root 'act' through adjectival '-ual' before taking suffix '-ly' to reach adverb state q7",
-        "Because 'actually' has an unpronounceable phoneme",
-        "Because it is an irregular German borrowing"
-      ],
-      correct: 1,
-      exp: "The standard FSA diagram started from base roots without the -ual branch entering the adjectival node before reaching -ly."
-    },
-    {
-      q: "How does Dravidian morphology (e.g. Tamil '-த்தனம்') mirror English derivational suffixes like '-ness'?",
-      options: [
-        "Both transform concrete noun/adjective roots into abstract state nouns",
-        "Both are inflectional tense markers only",
-        "Both delete the root word completely",
-        "Both only apply to numerals"
-      ],
-      correct: 0,
-      exp: "In Tamil, 'மனிதன்' (man) + '-த்தனம்' → 'மனிதத்தனம்' (humanity). Just like English happy + -ness → happiness."
-    }
-  ];
-
-  const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
-  const [showResults, setShowResults] = useState(false);
-
-  const handleSelectQuizAnswer = (qIdx: number, optIdx: number) => {
-    if (showResults) return;
-    setQuizAnswers(prev => ({ ...prev, [qIdx]: optIdx }));
-  };
-
-  const score = Object.entries(quizAnswers).reduce((acc, [qIdx, ans]) => {
-    return ans === fsaQuizQuestions[parseInt(qIdx)].correct ? acc + 1 : acc;
-  }, 0);
-
   // Period 16: The Exam Question Card
   if (period === 16) {
     return (
@@ -180,7 +114,6 @@ export const WingFSA: React.FC<WingFSAProps> = ({ period }) => {
                 English Derivational Morphology FSA (q0–q11)
               </h2>
             </div>
-            <PlaceholderBadge label="[VERIFY MY ANSWER]" field="FSA Derivation Transitions" />
           </div>
 
           {/* Word Picker Buttons */}
@@ -375,109 +308,5 @@ export const WingFSA: React.FC<WingFSAProps> = ({ period }) => {
     );
   }
 
-  // Period 18: In My Mother Tongue + 5-Question Quiz
-  return (
-    <div className="space-y-6">
-      <div className="p-6 rounded-2xl bg-chalkboard-light/60 border border-chalk/15 shadow-xl">
-        <div className="flex items-center justify-between mb-2">
-          <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-chalk-green/20 text-chalk-green border border-chalk-green/30">
-            Period 18 · Mother Tongue & Knowledge Check
-          </span>
-          <PlaceholderBadge label="[MY LANGUAGE]" field="Regional Language" />
-        </div>
-
-        <h2 className="text-2xl sm:text-3xl font-bold font-chalk text-chalk mb-2">
-          Derivational Morphology in Indian Languages + 5-Question Quiz
-        </h2>
-        <p className="text-sm text-chalk/80 leading-relaxed mb-6">
-          Derivation is not just an English feature. In Tamil and Hindi, bound affixes systematically shift concrete nouns into qualities (e.g. தமிழ்: மனிதன் → மனிதத்தனம்; हिन्दी: मानव → मानवता). Test your comprehension of derivational state machines below!
-        </p>
-
-        {/* 5-Question Quiz Card */}
-        <div className="p-6 rounded-2xl chalk-board-bg border-2 border-gold/40 shadow-xl space-y-6">
-          <div className="flex items-center justify-between border-b border-chalk/15 pb-3">
-            <span className="text-sm font-bold text-gold uppercase tracking-wider font-mono">
-              FSA Derivational Morphology Quiz
-            </span>
-            <span className="text-xs font-mono text-chalk-green font-bold">
-              {showResults ? `Score: ${score} / 5 (${((score / 5) * 100).toFixed(0)}%)` : `${Object.keys(quizAnswers).length} of 5 Answered`}
-            </span>
-          </div>
-
-          <div className="space-y-6">
-            {fsaQuizQuestions.map((qItem, qIdx) => {
-              const selectedOpt = quizAnswers[qIdx];
-              return (
-                <div key={qIdx} className="p-4 rounded-xl bg-black/30 border border-chalk/10 space-y-3">
-                  <h4 className="font-bold text-sm text-chalk">
-                    {qIdx + 1}. {qItem.q}
-                  </h4>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {qItem.options.map((opt, optIdx) => {
-                      const isSelected = selectedOpt === optIdx;
-                      const isCorrect = optIdx === qItem.correct;
-                      let btnStyle = "bg-black/30 hover:bg-black/50 text-chalk/80 border-chalk/10";
-
-                      if (isSelected) {
-                        btnStyle = "bg-gold/20 text-gold-light border-gold";
-                      }
-                      if (showResults) {
-                        if (isCorrect) btnStyle = "bg-emerald-900/60 text-emerald-200 border-emerald-400";
-                        else if (isSelected) btnStyle = "bg-red-900/60 text-red-200 border-red-400";
-                      }
-
-                      return (
-                        <button
-                          key={optIdx}
-                          onClick={() => handleSelectQuizAnswer(qIdx, optIdx)}
-                          className={`p-3 rounded-lg text-left text-xs font-sans transition-all border ${btnStyle}`}
-                        >
-                          {opt}
-                        </button>
-                      );
-                    })}
-                  </div>
-
-                  {showResults && (
-                    <div className="p-2.5 rounded bg-black/40 border border-chalk/10 text-xs text-chalk/80 font-sans mt-2">
-                      <span className="font-bold text-gold mr-1">Explanation:</span>
-                      {qItem.exp}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Quiz Action Buttons */}
-          <div className="pt-2 flex items-center justify-between">
-            <button
-              onClick={() => {
-                setQuizAnswers({});
-                setShowResults(false);
-              }}
-              className="px-4 py-2 rounded-xl bg-black/40 hover:bg-black/60 text-xs text-chalk font-mono border border-chalk/20"
-            >
-              Reset Quiz
-            </button>
-
-            {!showResults ? (
-              <button
-                onClick={() => setShowResults(true)}
-                disabled={Object.keys(quizAnswers).length === 0}
-                className="px-6 py-2.5 rounded-xl bg-gold hover:bg-gold-light text-wood-dark font-bold text-xs shadow-md transition-colors disabled:opacity-40"
-              >
-                Submit Answers & Reveal Explanations
-              </button>
-            ) : (
-              <span className="text-xs font-bold text-chalk-green font-mono">
-                {score >= 4 ? "🌟 Outstanding! Ready for CAT 2 Section B." : "Review explanations above to brush up."}
-              </span>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return null;
 };

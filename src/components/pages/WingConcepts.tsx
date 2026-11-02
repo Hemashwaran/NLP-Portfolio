@@ -116,17 +116,16 @@ export const WingConcepts: React.FC<WingConceptsProps> = ({ period }) => {
 
   // Page 14: Interactive NER Highlighter
   const nerTokens = [
-    { text: "Dr. Rao", entity: "PERSON", color: "bg-blue-500/30 text-blue-300 border-blue-400" },
-    { text: "visited", entity: null, color: "" },
-    { text: "CMC Vellore", entity: "HOSPITAL / LOC", color: "bg-emerald-500/30 text-emerald-300 border-emerald-400" },
-    { text: "hospital", entity: null, color: "" },
+    { text: "The", entity: null, color: "" },
+    { text: "Central Library", entity: "LOCATION", color: "bg-emerald-500/30 text-emerald-300 border-emerald-400" },
+    { text: "at", entity: null, color: "" },
+    { text: "VIT Vellore", entity: "ORGANIZATION", color: "bg-blue-500/30 text-blue-300 border-blue-400" },
+    { text: "stays", entity: null, color: "" },
+    { text: "open", entity: null, color: "" },
+    { text: "till", entity: null, color: "" },
+    { text: "9 PM", entity: "TIME", color: "bg-red-500/30 text-red-300 border-red-400" },
     { text: "on", entity: null, color: "" },
-    { text: "Tuesday", entity: "DATE", color: "bg-purple-500/30 text-purple-300 border-purple-400" },
-    { text: "for", entity: null, color: "" },
-    { text: "a", entity: null, color: "" },
-    { text: "Nipah virus", entity: "DISEASE", color: "bg-red-500/30 text-red-300 border-red-400" },
-    { text: "advisory", entity: null, color: "" },
-    { text: "meeting.", entity: null, color: "" }
+    { text: "Sunday.", entity: "DATE", color: "bg-purple-500/30 text-purple-300 border-purple-400" }
   ];
   const [activeNERFilter, setActiveNERFilter] = useState<string>("ALL");
 
@@ -248,7 +247,7 @@ export const WingConcepts: React.FC<WingConceptsProps> = ({ period }) => {
             </h2>
           </div>
           <p className="text-sm text-chalk/80 leading-relaxed mb-4">
-            70% of NLP is preprocessing. Type or paste your own sentence into the box below. Watch our regex tokenizer identify token boundaries and flag frequent stop words in real time!
+            Preprocessing comes first in NLP. Type or paste your own sentence into the box below. Watch our regex tokenizer identify token boundaries and flag frequent stop words in real time!
           </p>
 
           {/* User Input Area */}
@@ -507,12 +506,12 @@ export const WingConcepts: React.FC<WingConceptsProps> = ({ period }) => {
             </h2>
           </div>
           <p className="text-sm text-chalk/80 leading-relaxed mb-6">
-            Named Entity Recognition extracts structured entities (persons, hospitals, diseases, dates) from messy text. Toggle entity categories to filter entity spans below!
+            Named Entity Recognition finds things like places, organisations, times and dates in text. Tap a category to highlight it in the example sentence.
           </p>
 
           {/* Filter Chips */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {["ALL", "PERSON", "HOSPITAL / LOC", "DATE", "DISEASE"].map((f) => (
+            {["ALL", "LOCATION", "ORGANIZATION", "TIME", "DATE"].map((f) => (
               <button
                 key={f}
                 onClick={() => setActiveNERFilter(f)}

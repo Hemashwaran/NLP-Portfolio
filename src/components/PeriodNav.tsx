@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { PAGES_DATA } from '../data/content';
+import { PAGES_DATA, TOTAL_PERIODS } from '../data/content';
 import { ChevronLeft, ChevronRight, BookOpen, Maximize2 } from 'lucide-react';
 
 interface PeriodNavProps {
@@ -13,11 +13,11 @@ const WINGS = [
   { id: 'A', name: 'Arrival', range: [1, 4] },
   { id: 'B', name: 'How Mam Taught', range: [5, 8] },
   { id: 'C', name: 'Concept Notebook', range: [9, 15] },
-  { id: 'D', name: 'The FSA Problem', range: [16, 18] },
-  { id: 'E', name: 'Campus Connect', range: [19, 22] },
-  { id: 'F', name: 'Stars & Radar', range: [23, 25] },
-  { id: 'G', name: 'CAT 2 Exams', range: [26, 27] },
-  { id: 'H', name: 'Reflection', range: [28, 30] },
+  { id: 'D', name: 'The FSA Problem', range: [16, 17] },
+  { id: 'E', name: 'Campus Connect', range: [18, 20] },
+  { id: 'F', name: 'Stars & Ideas', range: [21, 22] },
+  { id: 'G', name: 'CAT 2', range: [23, 23] },
+  { id: 'H', name: 'Reflection', range: [24, 25] },
 ];
 
 export const PeriodNav: React.FC<PeriodNavProps> = ({
@@ -42,7 +42,7 @@ export const PeriodNav: React.FC<PeriodNavProps> = ({
   }, [currentPeriod]);
 
   const canGoPrev = currentPeriod > 1;
-  const canGoNext = currentPeriod < 30;
+  const canGoNext = currentPeriod < TOTAL_PERIODS;
 
   return (
     <footer className="sticky bottom-0 left-0 right-0 z-40 bg-chalkboard-dark/95 border-t border-chalk/15 backdrop-blur-md shadow-2xl py-2 px-3 md:px-6">
@@ -78,7 +78,7 @@ export const PeriodNav: React.FC<PeriodNavProps> = ({
               <ChevronLeft className="w-4 h-4" />
             </button>
             <span className="text-xs font-mono px-2 py-1 bg-black/30 rounded font-bold text-gold">
-              {currentPeriod}/30
+              {currentPeriod}/{TOTAL_PERIODS}
             </span>
             <button
               onClick={() => canGoNext && onSelectPeriod(currentPeriod + 1)}

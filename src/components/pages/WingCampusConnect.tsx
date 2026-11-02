@@ -12,31 +12,38 @@ export const WingCampusConnect: React.FC<WingCampusConnectProps> = ({ period }) 
   const screenshots = [
     {
       id: 1,
-      file: '/assets/screenshots/campus-1.png',
-      title: 'Home Chat with Curated Topic Tiles',
-      caption: 'Clean, card-based interface welcoming students with suggestion chips and quick categories for SJT, TT, and Library.',
-      tag: 'Main Interface'
-    },
-    {
-      id: 2,
-      file: '/assets/screenshots/campus-2.png',
-      title: 'Multilingual Settings Drawer',
-      caption: 'Language selection panel supporting English, தமிழ், తెలుగు, മലയാളം, and हिन्दी with instant dialect switching.',
-      tag: 'Multilingual'
-    },
-    {
-      id: 3,
-      file: '/assets/screenshots/campus-3.png',
-      title: 'Pedestrian Directions & Google Maps Link',
-      caption: 'Asking "Where is Anna Auditorium?" gives walking distance from current location with a one-tap Google Maps walking link.',
+      file: '/screenshots/campus-1.jpg',
+      title: 'Home Screen & Directions',
+      caption: 'The home screen with topic tiles and five language chips. Asking "Where is prp how to go?" opens directions to Pearl Research Park.',
       tag: 'Navigation'
     },
     {
+      id: 2,
+      file: '/screenshots/campus-2.jpg',
+      title: 'Google Maps Route',
+      caption: 'The "Open in Google Maps" button hands the route over to Google Maps from the current location.',
+      tag: 'Maps'
+    },
+    {
+      id: 3,
+      file: '/screenshots/campus-3.jpg',
+      title: 'Helpline Numbers',
+      caption: 'Asking for a helpline number returns 112, 108, the women\'s helpline 181 and anti-ragging 1800-180-5522, with related questions and a sample-data notice.',
+      tag: 'Safety'
+    },
+    {
       id: 4,
-      file: '/assets/screenshots/campus-4.png',
-      title: 'Emergency Helpline Response & Auto SOS',
-      caption: 'Immediate trigger for urgent queries, presenting direct-dial cards for 112, Ambulance (108), Women’s Helpline (181), and Anti-Ragging.',
-      tag: 'Safety SOS'
+      file: '/screenshots/campus-4.jpg',
+      title: 'Settings Drawer',
+      caption: 'Reply language (auto-match), current location, speak replies, auto-open maps, voice language and the list of topics.',
+      tag: 'Settings'
+    },
+    {
+      id: 5,
+      file: '/screenshots/campus-5.jpg',
+      title: 'Answering in Tamil',
+      caption: 'A question asked in Tamil about the courses at VIT gets its answer in Tamil, with related questions in Tamil too.',
+      tag: 'Multilingual'
     }
   ];
 
@@ -73,7 +80,6 @@ export const WingCampusConnect: React.FC<WingCampusConnectProps> = ({ period }) 
                 Campus Connect: Intelligent VIT FAQ & Navigation Guide
               </h2>
             </div>
-            <PlaceholderBadge label="[SOLO/TEAM]" field="Project Contribution Role" />
           </div>
 
           <div className="p-4 rounded-xl bg-gradient-to-r from-blue-900/40 to-teal-900/30 border border-blue-400/30 mb-6">
@@ -110,7 +116,7 @@ export const WingCampusConnect: React.FC<WingCampusConnectProps> = ({ period }) 
     );
   }
 
-  // Period 20: Screenshot Tour
+  // Period 20: Screenshot Tour (real screenshots)
   if (period === 20) {
     const curSlide = screenshots[activeSlide];
     return (
@@ -119,129 +125,32 @@ export const WingCampusConnect: React.FC<WingCampusConnectProps> = ({ period }) 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
             <div>
               <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-gold/20 text-gold border border-gold/30">
-                Period 20 · Visual UI Flow
+                Period 19 · Screenshots
               </span>
               <h2 className="text-2xl font-bold font-chalk text-chalk mt-1">
-                Screenshot Tour: 4 Mobile Views
+                Screenshot Tour: Campus Connect on My Phone
               </h2>
             </div>
             <span className="text-xs font-mono text-chalk/60">
-              Slide {activeSlide + 1} of 4
+              Screen {activeSlide + 1} of {screenshots.length}
             </span>
           </div>
 
           <p className="text-sm text-chalk/80 leading-relaxed mb-6">
-            Swipe or click through the mockup screens below to see how Campus Connect delivers answers, maps routes, and handles emergency contacts.
+            Real screenshots of Campus Connect running on my phone. Tap a screen to see it.
           </p>
 
-          {/* Phone Frame Simulator */}
-          <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
-            {/* Phone Screen Mockup */}
-            <div className="relative w-72 sm:w-80 h-[480px] rounded-[36px] bg-black border-4 border-gray-700 p-3 shadow-2xl flex flex-col justify-between overflow-hidden">
-              {/* Phone Speaker Notch */}
-              <div className="w-24 h-4 bg-gray-800 rounded-full mx-auto mb-2" />
-
-              {/* Screen Body with Graceful Fallback Art */}
-              <div className="flex-1 rounded-2xl bg-[#0f172a] text-white p-4 flex flex-col justify-between overflow-hidden border border-gray-800">
-                <div>
-                  <div className="flex items-center justify-between border-b border-gray-800 pb-2 mb-3">
-                    <span className="text-xs font-bold text-blue-400">Campus Connect</span>
-                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-blue-900/60 text-blue-200">
-                      {curSlide.tag}
-                    </span>
-                  </div>
-
-                  {/* Fallback Graphic UI for each slide */}
-                  {curSlide.id === 1 && (
-                    <div className="space-y-2 text-xs">
-                      <div className="p-2.5 rounded-xl bg-gray-800/80 text-gray-200">
-                        👋 Hi! Ask me anything about VIT Vellore in Tamil, Telugu, Hindi, or English.
-                      </div>
-                      <div className="grid grid-cols-2 gap-1.5 pt-2">
-                        <div className="p-2 rounded-lg bg-blue-950/60 border border-blue-800/50 text-[11px] text-blue-200">
-                          📚 Library Timings
-                        </div>
-                        <div className="p-2 rounded-lg bg-teal-950/60 border border-teal-800/50 text-[11px] text-teal-200">
-                          🚌 Shuttle Routes
-                        </div>
-                        <div className="p-2 rounded-lg bg-amber-950/60 border border-amber-800/50 text-[11px] text-amber-200">
-                          🏥 Health Centre
-                        </div>
-                        <div className="p-2 rounded-lg bg-red-950/60 border border-red-800/50 text-[11px] text-red-200">
-                          🚨 Emergency SOS
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {curSlide.id === 2 && (
-                    <div className="space-y-2 text-xs">
-                      <span className="text-[11px] font-bold text-gray-400">Select Interface Language:</span>
-                      {["English (Standard)", "தமிழ் (Tamil)", "తెలుగు (Telugu)", "മലയാളം (Malayalam)", "हिन्दी (Hindi)"].map((l, i) => (
-                        <div key={i} className={`p-2 rounded-lg border text-xs flex justify-between ${
-                          i === 0 ? 'bg-blue-600/30 border-blue-500 text-blue-200' : 'bg-gray-800/40 border-gray-700 text-gray-300'
-                        }`}>
-                          <span>{l}</span>
-                          {i === 0 && <span className="text-blue-400">✓</span>}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  {curSlide.id === 3 && (
-                    <div className="space-y-2 text-xs">
-                      <div className="p-2.5 rounded-xl bg-gray-800/80">
-                        📍 <strong>Destination:</strong> Anna Auditorium
-                      </div>
-                      <div className="p-3 rounded-xl bg-emerald-950/60 border border-emerald-700/50 space-y-1">
-                        <span className="text-emerald-300 font-bold block text-xs">Walking Route: 450 meters (6 mins)</span>
-                        <p className="text-[11px] text-gray-300">Head straight from TT circle past MB lawns.</p>
-                        <a
-                          href="https://maps.google.com"
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-block mt-2 px-2.5 py-1 rounded bg-emerald-600 text-white text-[11px] font-bold"
-                        >
-                          Open in Google Maps ↗
-                        </a>
-                      </div>
-                    </div>
-                  )}
-
-                  {curSlide.id === 4 && (
-                    <div className="space-y-2 text-xs">
-                      <div className="p-2.5 rounded-xl bg-red-950/60 border border-red-800/60 text-red-200">
-                        🚨 <strong>Emergency Contact Cards:</strong>
-                      </div>
-                      <div className="space-y-1.5 pt-1">
-                        <div className="p-2 rounded-lg bg-gray-800/80 flex justify-between items-center text-xs">
-                          <span>National Police</span>
-                          <span className="font-mono font-bold text-red-400">112</span>
-                        </div>
-                        <div className="p-2 rounded-lg bg-gray-800/80 flex justify-between items-center text-xs">
-                          <span>Medical Ambulance</span>
-                          <span className="font-mono font-bold text-emerald-400">108</span>
-                        </div>
-                        <div className="p-2 rounded-lg bg-gray-800/80 flex justify-between items-center text-xs">
-                          <span>Women Helpline</span>
-                          <span className="font-mono font-bold text-purple-400">181</span>
-                        </div>
-                        <div className="p-2 rounded-lg bg-gray-800/80 flex justify-between items-center text-xs">
-                          <span>Anti-Ragging</span>
-                          <span className="font-mono font-bold text-gold text-[10px]">1800-180-5522</span>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Home Indicator */}
-                <div className="w-16 h-1 bg-gray-600 rounded-full mx-auto" />
-              </div>
+          <div className="flex flex-col md:flex-row gap-6 items-center md:items-start justify-center">
+            <div className="w-64 sm:w-72 rounded-[28px] bg-black border-4 border-gray-700 p-2 shadow-2xl overflow-hidden">
+              <img
+                src={curSlide.file}
+                alt={curSlide.title}
+                className="w-full h-auto rounded-[20px] block"
+                loading="lazy"
+              />
             </div>
 
-            {/* Slide Details & Selector */}
-            <div className="max-w-md space-y-4">
+            <div className="max-w-md w-full space-y-4">
               <div className="p-5 rounded-xl bg-black/40 border border-gold/30">
                 <span className="text-xs font-mono text-gold font-bold uppercase tracking-wider block mb-1">
                   {curSlide.tag}
@@ -254,8 +163,7 @@ export const WingCampusConnect: React.FC<WingCampusConnectProps> = ({ period }) 
                 </p>
               </div>
 
-              {/* Slide Buttons */}
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {screenshots.map((s, idx) => (
                   <button
                     key={s.id}
@@ -267,7 +175,7 @@ export const WingCampusConnect: React.FC<WingCampusConnectProps> = ({ period }) 
                     }`}
                   >
                     <span className="block font-mono text-[10px] opacity-70">Screen {s.id}</span>
-                    <span className="truncate block">{s.title.split(' ')[0]} {s.title.split(' ')[1]}</span>
+                    <span className="truncate block">{s.title}</span>
                   </button>
                 ))}
               </div>
@@ -287,13 +195,12 @@ export const WingCampusConnect: React.FC<WingCampusConnectProps> = ({ period }) 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
             <div>
               <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-chalk-green/20 text-chalk-green border border-chalk-green/30">
-                Period 21 · Feature Capabilities
+                Period 19 · Features
               </span>
               <h2 className="text-2xl font-bold font-chalk text-chalk mt-1">
                 What Campus Connect Can Do: 11 Topics & SOS
               </h2>
             </div>
-            <PlaceholderBadge label="[CONFIRM numbers]" field="Helpline Numbers Verification" />
           </div>
 
           <p className="text-sm text-chalk/80 leading-relaxed mb-6">
@@ -416,13 +323,12 @@ export const WingCampusConnect: React.FC<WingCampusConnectProps> = ({ period }) 
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
           <div>
             <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-gold/20 text-gold border border-gold/30">
-              Period 22 · Project Retrospective
+              Period 20 · Project Retrospective
             </span>
             <h2 className="text-2xl font-bold font-chalk text-chalk mt-1">
-              Challenges, Lessons Learned & Live Links
+              Challenges & Lessons Learned
             </h2>
           </div>
-          <PlaceholderBadge label="[MY EXPERIENCE]" field="Personal Engineering Lessons" />
         </div>
 
         <p className="text-sm text-chalk/80 leading-relaxed mb-6">
@@ -460,30 +366,6 @@ export const WingCampusConnect: React.FC<WingCampusConnectProps> = ({ period }) 
           ))}
         </div>
 
-        {/* Action Link Buttons */}
-        <div className="p-5 rounded-xl bg-chalkboard-dark border border-gold/40 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
-            <h4 className="text-sm font-bold text-chalk font-chalk text-base">Project Repositories & Deployment</h4>
-            <p className="text-xs text-chalk/70">Inspect source code and live demonstrator link placeholders</p>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => alert("Live Demo URL: [LIVE DEMO URL] placeholder")}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gold hover:bg-gold-light text-wood-dark font-bold text-xs shadow transition-colors"
-            >
-              <span><PlaceholderBadge label="[LIVE DEMO URL]" /></span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </button>
-            <button
-              onClick={() => alert("GitHub Repository URL: [GITHUB URL] placeholder")}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-black/50 hover:bg-black/70 text-chalk font-semibold text-xs border border-chalk/20 transition-colors"
-            >
-              <span><PlaceholderBadge label="[GITHUB URL]" /></span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );

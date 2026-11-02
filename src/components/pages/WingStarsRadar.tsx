@@ -34,13 +34,12 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-chalk/20 pb-4 mb-6">
             <div>
               <span className="px-2.5 py-0.5 rounded text-xs font-mono font-bold bg-gold/20 text-gold border border-gold/30">
-                Period 23 · Classroom Recognition
+                Period 21 · Classroom Recognition
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold font-chalk text-chalk mt-1">
                 The Star Chart: 5 Gold Stars Earned
               </h2>
             </div>
-            <PlaceholderBadge label="[MY STORY]" field="Personal Star Story" />
           </div>
 
           {/* Central Star Board Presentation */}
@@ -59,7 +58,7 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
                     setSelectedStarGroup(starNum <= 2 ? 'questions' : 'project');
                   }}
                   className="group relative transform hover:scale-125 transition-transform duration-200"
-                  title={starNum <= 2 ? "Star for Class Questions" : "Star for Outbreak Radar Pitch"}
+                  title={starNum <= 2 ? "Star for Class Questions" : "Star for NLP Application Ideas"}
                 >
                   <Star className="w-10 h-10 sm:w-12 sm:h-12 fill-gold text-gold-light drop-shadow-[0_0_12px_rgba(242,184,75,0.6)] animate-pulse" />
                   <span className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-[10px] font-mono text-gold opacity-0 group-hover:opacity-100 transition-opacity">
@@ -77,7 +76,7 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
                     : 'bg-black/30 text-chalk/80 border-chalk/10'
                   }`}
               >
-                ★★ Stars 1 & 2: Classroom Questions (Week 4)
+                ★★ Stars 1 & 2: Answering Questions in Class
               </button>
               <button
                 onClick={() => setSelectedStarGroup('project')}
@@ -86,7 +85,7 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
                     : 'bg-black/30 text-chalk/80 border-chalk/10'
                   }`}
               >
-                ★★★ Stars 3, 4 & 5: Project Topic Pitch (Week 8)
+                ★★★ Stars 3, 4 & 5: NLP Application Ideas
               </button>
             </div>
           </div>
@@ -98,16 +97,16 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
                 Story 1: Answering questions
               </span>
               <p className="text-xs sm:text-sm text-chalk/90 leading-relaxed">
-                "During class I answered 2 questions asked by mam"
+                Mam asked questions in class. I answered two of them and got a star for each answer.
               </p>
             </div>
           ) : (
             <div className="p-5 rounded-xl bg-chalkboard-dark border border-gold/30 space-y-2 animate-in fade-in">
               <span className="text-xs font-mono font-bold text-gold uppercase tracking-wider block">
-                Story 2: Pitching Outbreak Radar to the Class
+                Story 2: Presenting NLP Application Ideas
               </span>
               <p className="text-xs sm:text-sm text-chalk/90 leading-relaxed">
-                When presenting project ideas, many teams suggested different ideas. I proposed connecting localized regional news NER with inter-district public bus timetables during the Nipah fever alert in Kerala. Showing how NLP could detect geographic transmission corridors before official bulletins earned a 3-star commendation from mam!
+                Mam asked us to prepare an idea using an NLP application. I presented two ideas: Outbreak Radar, which links places mentioned in news reports of fever cases with bus routes, and a rumour detection idea for health alerts. Mam gave 3 stars for those ideas.
               </p>
             </div>
           )}
@@ -124,11 +123,11 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
           <div className="flex items-center gap-2 mb-2">
             <Radio className="w-5 h-5 text-gold" />
             <h2 className="text-2xl font-bold font-chalk text-chalk">
-              My Idea Board: Handwritten Notebook Brainstorms
+              My Two NLP Application Ideas
             </h2>
           </div>
           <p className="text-sm text-chalk/80 leading-relaxed mb-6">
-            Two distinct crisis-response NLP innovations jotted down in the back pages of my classroom spiral pad during semester brainstorming:
+            Mam asked us to prepare an idea using an NLP application. These are the two ideas I presented in class:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -142,14 +141,14 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
                 Rumour Detection during Nipah Virus Alert
               </h3>
               <p className="text-xs text-amber-900/90 leading-relaxed mb-4 font-sans">
-                During regional viral outbreaks, misinformation spreads faster than the pathogen. This idea extracts medical entities and classifies viral posts into verified advisories vs panic claims.
+                During health alerts like Nipah, false messages spread quickly. The idea is to find hospital and place names in posts and sort them into confirmed news, rumours, and debunked claims.
               </p>
 
               <div className="space-y-1.5 pt-2 border-t border-amber-300 text-xs font-mono text-amber-950">
                 <div className="font-bold">NLP Competencies Involved:</div>
-                <div className="text-[11px]">• Medical Named Entity Recognition (Extract hospitals, clinic names)</div>
-                <div className="text-[11px]">• Entity Linking (Match to district health databases)</div>
-                <div className="text-[11px]">• Stance Classification (Confirm, Deny, Query, Comment)</div>
+                <div className="text-[11px]">• Named Entity Recognition (hospital and place names)</div>
+                <div className="text-[11px]">• Text Classification (rumour or confirmed news)</div>
+                <div className="text-[11px]">• Stance Detection (confirm, deny, question)</div>
               </div>
             </div>
 
@@ -163,14 +162,14 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
                 Outbreak Radar: NLP + Transport Networks
               </h3>
               <p className="text-xs text-amber-900/90 leading-relaxed mb-4 font-sans">
-                Fusing text intelligence with real-world infrastructure: parsing news reports of fever clusters to map inter-district bus depots and forecast contagion corridors.
+                The idea is to read news reports of fever cases, pick out the town names, and link them with bus routes to show which nearby towns may need to stay alert.
               </p>
 
               <div className="space-y-1.5 pt-2 border-t border-amber-300 text-xs font-mono text-amber-950">
                 <div className="font-bold">NLP & Geographic Capabilities:</div>
-                <div className="text-[11px]">• Custom Regional NER (Towns, bus stops, local clinics)</div>
-                <div className="text-[11px]">• Temporal Extraction (Date of onset, symptom velocity)</div>
-                <div className="text-[11px]">• Transport Corridors (Predicting down-route risk hubs)</div>
+                <div className="text-[11px]">• NER for towns, bus stands and clinics</div>
+                <div className="text-[11px]">• Picking out dates from reports</div>
+                <div className="text-[11px]">• Linking places with bus routes</div>
               </div>
             </div>
           </div>
@@ -186,7 +185,7 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
           <div>
             <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-gold/20 text-gold border border-gold/30">
-              Period 25 · Non-Technical Concept
+              Period 22 · The Idea, Simply
             </span>
             <h2 className="text-2xl font-bold font-chalk text-chalk mt-1">
               Outbreak Radar, Explained Simply
@@ -198,7 +197,7 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
         </div>
 
         <p className="text-sm text-chalk/80 leading-relaxed mb-4">
-          How can text processing help stop an epidemic? When a localized fever breaks out in Town A, local newspapers report clinic visits days before national dashboards update. Outbreak Radar reads these alerts, cross-references bus schedules leaving Town A, and warns clinics in Town B and C to prepare testing kits!
+          Outbreak Radar is an idea I presented, not a finished system. Local news often reports fever cases in a town. If NLP reads those reports and links the town with bus routes leaving it, nearby towns could be told to be ready.
         </p>
 
         {/* Illustrative Simulation Graphic */}
@@ -229,7 +228,7 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
                 <circle cx="0" cy="0" r="28" fill="#7f1d1d" opacity="0.6" className="animate-ping" />
                 <circle cx="0" cy="0" r="18" fill="#dc2626" stroke="#fff" strokeWidth="2" />
                 <text x="0" y="4" textAnchor="middle" fill="#fff" fontWeight="bold">Town A</text>
-                <text x="0" y="-24" textAnchor="middle" fill="#fca5a5" fontSize="10">NER: 14 Cases Reported</text>
+                <text x="0" y="-24" textAnchor="middle" fill="#fca5a5" fontSize="10">News: fever cases reported</text>
               </g>
 
               {/* Node B (Transit Junction) */}
@@ -237,7 +236,7 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
                 <circle cx="0" cy="0" r="16" fill={simStep >= 2 ? "#b45309" : "#334155"} stroke="#fff" strokeWidth="2" />
                 <text x="0" y="4" textAnchor="middle" fill="#fff" fontWeight="bold">Junction B</text>
                 <text x="0" y="-22" textAnchor="middle" fill="#fde047" fontSize="10">
-                  {simStep >= 2 ? "High Bus Frequency (42 trips/day)" : "Station B"}
+                  {simStep >= 2 ? "Bus route from Town A" : "Station B"}
                 </text>
               </g>
 
@@ -255,7 +254,7 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
                 <circle cx="0" cy="0" r={simStep === 3 ? "24" : "18"} fill={simStep === 3 ? "#047857" : "#334155"} stroke="#fff" strokeWidth="2" />
                 <text x="0" y="4" textAnchor="middle" fill="#fff" fontWeight="bold">City D</text>
                 <text x="0" y="-26" textAnchor="middle" fill="#6ee7b7" fontSize="10">
-                  {simStep === 3 ? "Proactive Testing Alert Dispatched!" : "Destination Hub"}
+                  {simStep === 3 ? "Alert nearby town" : "Destination Hub"}
                 </text>
               </g>
 
@@ -268,13 +267,13 @@ export const WingStarsRadar: React.FC<WingStarsRadarProps> = ({ period }) => {
               )}
             </svg>
             <span className="absolute bottom-2 right-2 text-[10px] text-gray-500 font-mono">
-              Fictional illustrative model · Not epidemiological diagnosis
+              Illustration of the idea only
             </span>
           </div>
 
           <div className="p-3.5 rounded-xl bg-gray-900 border border-gray-800 text-xs text-gray-300 leading-relaxed">
             <span className="font-bold text-gold mr-1">Concept Summary:</span>
-            By listening to raw public text streams with custom Medical NER and connecting entity locations to public transport timetables, we transform passive news reading into an active early-warning system.
+            Use NER to find places in news reports, then link those places with bus routes to suggest which towns should stay alert.
           </div>
         </div>
       </div>

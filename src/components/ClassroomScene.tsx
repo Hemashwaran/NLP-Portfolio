@@ -207,7 +207,7 @@ export const ClassroomScene: React.FC<ClassroomSceneProps> = ({
           CSE3002 · prp · VIT Vellore
         </text>
         <text x="600" y="215" textAnchor="middle" fill="#99d98c" fontSize="16" fontFamily="'DM Sans', sans-serif">
-          Faculty: Dr. SHARMILA BANU K mam · 30 Periods · 8 Wings
+          Faculty: Dr. SHARMILA BANU K mam · 25 Periods · 8 Wings
         </text>
 
         {/* Chalk Tray at Board Bottom */}
@@ -247,7 +247,7 @@ export const ClassroomScene: React.FC<ClassroomSceneProps> = ({
         <g
           transform="translate(940, 245)"
           className="cursor-pointer group"
-          onClick={() => onNavigateToPage(19)}
+          onClick={() => onNavigateToPage(18)}
         >
           <rect x="0" y="0" width="190" height="110" rx="4" fill="#1e293b" stroke="#334155" strokeWidth="3" />
           {/* Blue accent header */}
@@ -364,10 +364,10 @@ export const ClassroomScene: React.FC<ClassroomSceneProps> = ({
               tokens = tokenize(corpus)
             </text>
             <text x="45" y="60" fill="#4ade80" fontSize="8" fontFamily="'JetBrains Mono', monospace">
-              Out [1]: 14,820 tokens
+              Out [1]: ['NLP', 'is', 'fun']
             </text>
             <text x="45" y="76" fill="#facc15" fontSize="8" fontFamily="'JetBrains Mono', monospace">
-              Accuracy: 98.4%
+              print(tokens[:3])
             </text>
             {/* Laptop Base / Keyboard */}
             <polygon points="10,105 230,105 245,150 -5,150" fill="#334155" stroke="#1e293b" strokeWidth="2" />

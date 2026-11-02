@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { PAGES_DATA, TOUR_PRESETS } from '../data/content';
-import { X, Search, Sparkles, BookOpen, ArrowRight } from 'lucide-react';
+import { PAGES_DATA } from '../data/content';
+import { X, Search, BookOpen } from 'lucide-react';
 
 interface DiaryDrawerProps {
   isOpen: boolean;
   onClose: () => void;
   currentPeriod: number;
   onSelectPeriod: (period: number) => void;
-  onStartTour: (pages: number[]) => void;
+  onStartTour?: (pages: number[]) => void;
 }
 
 export const DiaryDrawer: React.FC<DiaryDrawerProps> = ({
@@ -18,7 +18,6 @@ export const DiaryDrawer: React.FC<DiaryDrawerProps> = ({
   onStartTour
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<'all' | 'tours'>('all');
 
   if (!isOpen) return null;
 
@@ -72,7 +71,7 @@ export const DiaryDrawer: React.FC<DiaryDrawerProps> = ({
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search concepts, FSA, labs, stars..."
+              placeholder="Search concepts, FSA, stars..."
               className="w-full pl-9 pr-4 py-2 text-sm rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold text-gray-800 placeholder-gray-400"
             />
             {searchQuery && (
@@ -85,65 +84,13 @@ export const DiaryDrawer: React.FC<DiaryDrawerProps> = ({
             )}
           </div>
 
-          <div className="flex items-center gap-2 self-start sm:self-auto">
-            <button
-              onClick={() => setActiveTab('all')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
-                activeTab === 'all'
-                  ? 'bg-[#8c5d37] text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
-              }`}
-            >
-              All 30 Periods ({filteredPages.length})
-            </button>
-            <button
-              onClick={() => setActiveTab('tours')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors ${
-                activeTab === 'tours'
-                  ? 'bg-[#8c5d37] text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
-              }`}
-            >
-              <Sparkles className="w-3.5 h-3.5 text-gold-dark" />
-              <span>Guided Tours (3)</span>
-            </button>
-          </div>
+          <span className="text-xs font-semibold text-gray-700 self-start sm:self-auto">
+            All 25 Periods ({filteredPages.length})
+          </span>
         </div>
 
         {/* Main Content Area */}
         <div className="flex-1 overflow-y-auto p-4 sm:p-6 notebook-paper space-y-4">
-          {activeTab === 'tours' ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {TOUR_PRESETS.map((tour) => (
-                <div
-                  key={tour.id}
-                  className="bg-white p-5 rounded-xl border-2 border-gold/40 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-gold/20 text-gold-dark mb-2">
-                      <Sparkles className="w-3 h-3" />
-                      {tour.pages.length} Periods
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-1">{tour.title}</h3>
-                    <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                      {tour.description}
-                    </p>
-                  </div>
-
-                  <button
-                    onClick={() => {
-                      onStartTour(tour.pages);
-                      onClose();
-                    }}
-                    className="w-full py-2 px-3 rounded-lg bg-[#8c5d37] hover:bg-[#6e462c] text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow transition-colors"
-                  >
-                    <span>Start This Tour</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              ))}
-            </div>
-          ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {filteredPages.map((page) => {
                 const isSelected = page.id === currentPeriod;
@@ -191,7 +138,6 @@ export const DiaryDrawer: React.FC<DiaryDrawerProps> = ({
                 );
               })}
             </div>
-          )}
         </div>
 
         {/* Footer Notes */}

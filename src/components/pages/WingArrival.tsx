@@ -15,13 +15,13 @@ export const WingArrival: React.FC<WingArrivalProps> = ({
   onNavigateToPage,
   onOpenDiary
 }) => {
-  // Page 4: Interactive skill levels
+  // Page 4: Skills practised
   const [skills, setSkills] = useState([
-    { name: 'Python & Jupyter Notebooks', level: 90, desc: 'Pandas, string cleaning, corpus extraction' },
-    { name: 'Regex & Tokenization', level: 85, desc: 'Pattern matching, boundary detection, normalization' },
-    { name: 'Morphology & FSA Modeling', level: 88, desc: 'State transitions, derivational affixes, roots' },
-    { name: 'Multilingual NLP (Indian Context)', level: 82, desc: 'Tamil, Telugu, Hindi agglutination, code-mixing' },
-    { name: 'NER & Intent Classification', level: 78, desc: 'Spacy pipelines, intent mapping, entity spans' },
+    { name: 'Text Processing in Python', level: 0, desc: 'Tokenizing, lowercasing, removing stop words' },
+    { name: 'Regular Expressions', level: 0, desc: 'Matching patterns like dates, emails and course codes' },
+    { name: 'Morphology & FSA', level: 0, desc: 'Roots, affixes and state transitions' },
+    { name: 'N-gram Language Models', level: 0, desc: 'Unigram and bigram counts and probabilities' },
+    { name: 'NER & Text Classification', level: 0, desc: 'Finding entities and sorting text into categories' },
   ]);
 
   if (period === 1) {
@@ -39,13 +39,13 @@ export const WingArrival: React.FC<WingArrivalProps> = ({
             Taking My Seat in Row 3
           </h2>
           <p className="text-chalk/80 leading-relaxed font-sans mb-4">
-            Welcome to my desk. In front of you is our green chalkboard with <em>Natural Language Processing</em> fresh in chalk. This portfolio documents my 30-period journey at VIT Vellore under <PlaceholderBadge label="Dr. SHARMILA BANU K mam" hint="Faculty Name" />.
+            Welcome to my desk. In front of you is our green chalkboard with <em>Natural Language Processing</em> fresh in chalk. This portfolio documents my 25-period journey at VIT Vellore under <PlaceholderBadge label="Dr. SHARMILA BANU K mam" hint="Faculty Name" />.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
             <div className="p-3.5 rounded-xl bg-black/30 border border-chalk/10">
-              <span className="text-xs text-gold font-bold block mb-1">01. Hands-on Jupyter</span>
-              <p className="text-xs text-chalk/70">Real corpora, messy student queries, code debugging in class.</p>
+              <span className="text-xs text-gold font-bold block mb-1">01. Hands-on Coding</span>
+              <p className="text-xs text-chalk/70">Tokenizing, n-grams and suffix rules, coded in class.</p>
             </div>
             <div className="p-3.5 rounded-xl bg-black/30 border border-chalk/10">
               <span className="text-xs text-chalk-yellow font-bold block mb-1">02. The FSA Challenge</span>
@@ -75,12 +75,6 @@ export const WingArrival: React.FC<WingArrivalProps> = ({
           </div>
         </div>
 
-        <div className="sticky-note p-4 rounded-xl max-w-md ml-auto">
-          <p className="font-chalk text-base font-bold mb-1">Teacher's podium note:</p>
-          <p className="text-xs text-amber-900 leading-snug">
-            "Language is the only code where ambiguity is a feature, not a compilation bug. Welcome to CSE3002!"
-          </p>
-        </div>
       </div>
     );
   }
@@ -98,7 +92,7 @@ export const WingArrival: React.FC<WingArrivalProps> = ({
               </h2>
             </div>
             <span className="px-3 py-1 rounded-full text-xs font-mono bg-black/40 text-chalk-green border border-chalk/10">
-              Winter Semester 2026
+              Fall Semester 2026-27
             </span>
           </div>
 
@@ -158,74 +152,51 @@ export const WingArrival: React.FC<WingArrivalProps> = ({
   }
 
   if (period === 3) {
+    const guide = [
+      { wing: 'A', name: 'Arrival', periods: '1–4', start: 1 },
+      { wing: 'B', name: 'How Our Mam Taught', periods: '5–8', start: 5 },
+      { wing: 'C', name: 'My Concept Notebook', periods: '9–15', start: 9 },
+      { wing: 'D', name: 'The FSA Problem', periods: '16–17', start: 16 },
+      { wing: 'E', name: 'Project: Campus Connect', periods: '18–20', start: 18 },
+      { wing: 'F', name: 'Stars & Project Ideas', periods: '21–22', start: 21 },
+      { wing: 'G', name: 'CAT 2', periods: '23', start: 23 },
+      { wing: 'H', name: 'Reflection', periods: '24–25', start: 24 },
+    ];
     return (
       <div className="space-y-6">
         <div className="p-6 rounded-2xl bg-chalkboard-light/70 border border-chalk/15 shadow-xl">
           <div className="flex items-center gap-2 mb-2">
             <BookOpen className="w-5 h-5 text-chalk-yellow" />
             <h2 className="text-2xl font-bold font-chalk text-chalk">
-              Class Diary (Index) & Guided Paths
+              Class Diary (Index)
             </h2>
           </div>
           <p className="text-sm text-chalk/80 leading-relaxed mb-4">
-            Every lecture, hands-on lab, and exam preparation session is recorded in this diary across 8 wings. Choose a curated pathway or open the drawer for full search.
+            25 periods in 8 wings. Tap a wing to jump to it, or use the arrow keys and the timetable strip to go period by period.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
-            <div className="p-4 rounded-xl bg-black/40 border border-gold/30 hover:border-gold transition-colors flex flex-col justify-between">
-              <div>
-                <span className="px-2 py-0.5 rounded text-[11px] font-bold bg-gold/20 text-gold mb-2 inline-block">
-                  2-Minute Speed Tour
-                </span>
-                <h3 className="font-bold text-chalk text-base mb-1">The Highlights</h3>
-                <p className="text-xs text-chalk/70 leading-relaxed mb-3">
-                  Jump directly to the classroom scene, the FSA exam question, the Campus Connect assistant, and star moments.
-                </p>
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
+            {guide.map((g) => (
               <button
-                onClick={() => onNavigateToPage(16)}
-                className="w-full py-2 rounded-lg bg-gold hover:bg-gold-light text-wood-dark font-bold text-xs shadow transition-colors"
+                key={g.wing}
+                onClick={() => onNavigateToPage(g.start)}
+                className="text-left p-3.5 rounded-xl bg-black/40 border border-chalk/15 hover:border-gold transition-colors flex items-center justify-between gap-3"
               >
-                Jump to FSA Highlight →
+                <div>
+                  <span className="text-[11px] font-mono font-bold text-gold block">Wing {g.wing}</span>
+                  <span className="font-bold text-chalk text-sm">{g.name}</span>
+                </div>
+                <span className="text-xs font-mono text-chalk/70 shrink-0">Periods {g.periods}</span>
               </button>
-            </div>
-
-            <div className="p-4 rounded-xl bg-black/40 border border-chalk-blue/30 hover:border-chalk-blue transition-colors flex flex-col justify-between">
-              <div>
-                <span className="px-2 py-0.5 rounded text-[11px] font-bold bg-chalk-blue/20 text-chalk-blue mb-2 inline-block">
-                  10-Minute Deep Dive
-                </span>
-                <h3 className="font-bold text-chalk text-base mb-1">Core Pedagogy & Labs</h3>
-                <p className="text-xs text-chalk/70 leading-relaxed mb-3">
-                  Follow mam’s teaching style, hands-on Jupyter corpus tasks, mother tongue morphology, and CAT 2 reflections.
-                </p>
-              </div>
-              <button
-                onClick={() => onNavigateToPage(5)}
-                className="w-full py-2 rounded-lg bg-chalk-blue hover:bg-blue-400 text-white font-bold text-xs shadow transition-colors"
-              >
-                Start at Wing B (Pedagogy) →
-              </button>
-            </div>
-
-            <div className="p-4 rounded-xl bg-black/40 border border-chalk-green/30 hover:border-chalk-green transition-colors flex flex-col justify-between">
-              <div>
-                <span className="px-2 py-0.5 rounded text-[11px] font-bold bg-chalk-green/20 text-chalk-green mb-2 inline-block">
-                  Complete 30 Periods
-                </span>
-                <h3 className="font-bold text-chalk text-base mb-1">Full Curriculum</h3>
-                <p className="text-xs text-chalk/70 leading-relaxed mb-3">
-                  Every concept notebook, drag-and-drop morphology splitter, 25-card glossary, and practice quizzes.
-                </p>
-              </div>
-              <button
-                onClick={onOpenDiary}
-                className="w-full py-2 rounded-lg bg-chalkboard-border hover:bg-chalkboard-light text-chalk font-bold text-xs border border-chalk/20 transition-colors"
-              >
-                Open Full Index Drawer →
-              </button>
-            </div>
+            ))}
           </div>
+
+          <button
+            onClick={onOpenDiary}
+            className="w-full py-2 rounded-lg bg-chalkboard-border hover:bg-chalkboard-light text-chalk font-bold text-xs border border-chalk/20 transition-colors"
+          >
+            Open Full Index →
+          </button>
         </div>
       </div>
     );
@@ -242,7 +213,6 @@ export const WingArrival: React.FC<WingArrivalProps> = ({
               About Me: Background, Interests & Skills
             </h2>
           </div>
-          <PlaceholderBadge label="[MY LEVELS]" field="Customize Skill Proficiency" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
@@ -254,34 +224,25 @@ export const WingArrival: React.FC<WingArrivalProps> = ({
               Living in Tamil Nadu while interacting daily with peers speaking Hindi, Telugu, Malayalam, and Bengali made me realize that Western NLP approaches rarely accommodate code-mixing, phonetic transliterations, or agglutinative Dravidian roots.
             </p>
             <p>
-              This portfolio represents my commitment to applying computational linguistics to real-world campus tools—like our multilingual guide <strong>Campus Connect</strong> and our crisis idea <strong>Outbreak Radar</strong>.
+              This portfolio represents my commitment to applying computational linguistics to real-world campus tools—like our multilingual guide <strong>Campus Connect</strong> and my NLP application idea <strong>Outbreak Radar</strong>.
             </p>
           </div>
 
-          {/* Interactive Skills Progress */}
+          {/* Skills practised */}
           <div className="p-4 rounded-xl bg-black/40 border border-chalk/15 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-chalk-yellow flex items-center gap-1.5">
               <Code className="w-4 h-4" />
-              Technical & Linguistic Skills (Self-Assessed)
+              Skills I Practised in This Course
             </h3>
 
-            <div className="space-y-3">
+            <ul className="space-y-2">
               {skills.map((skill, index) => (
-                <div key={index} className="space-y-1">
-                  <div className="flex justify-between text-xs">
-                    <span className="font-semibold text-chalk">{skill.name}</span>
-                    <span className="font-mono text-gold">{skill.level}%</span>
-                  </div>
-                  <div className="w-full h-2 rounded-full bg-chalkboard-border overflow-hidden">
-                    <div
-                      className="h-full bg-gradient-to-r from-gold to-chalk-yellow rounded-full transition-all duration-500"
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
+                <li key={index} className="text-xs">
+                  <span className="font-semibold text-chalk block">{skill.name}</span>
                   <span className="text-[11px] text-chalk/60 block">{skill.desc}</span>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </div>

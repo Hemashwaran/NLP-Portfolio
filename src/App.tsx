@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { PAGES_DATA } from './data/content';
+import { PAGES_DATA, TOTAL_PERIODS } from './data/content';
 import { ClassroomScene } from './components/ClassroomScene';
 import { PeriodNav } from './components/PeriodNav';
 import { DiaryDrawer } from './components/DiaryDrawer';
@@ -51,7 +51,7 @@ export function App() {
   }, [isEvening]);
 
   const goToPeriod = useCallback((periodNum: number) => {
-    const validNum = Math.max(1, Math.min(30, periodNum));
+    const validNum = Math.max(1, Math.min(TOTAL_PERIODS, periodNum));
     setCurrentPeriod(validNum);
     setViewMode('period');
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -66,7 +66,7 @@ export function App() {
         return;
       }
     }
-    if (currentPeriod < 30) {
+    if (currentPeriod < TOTAL_PERIODS) {
       goToPeriod(currentPeriod + 1);
     }
   }, [currentPeriod, tourPages, goToPeriod]);
@@ -155,7 +155,7 @@ export function App() {
           {viewMode === 'period' && (
             <div className="hidden md:flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 border border-chalk/15 text-xs">
               <span className="font-mono text-gold font-bold">
-                Period {currentPeriod}/30
+                Period {currentPeriod}/{TOTAL_PERIODS}
               </span>
               <span className="text-chalk/30">|</span>
               <span className="text-chalk/90 font-medium truncate max-w-xs">
@@ -252,7 +252,7 @@ export function App() {
                   </span>
                   <span className="text-chalk/40">·</span>
                   <span className="text-xs font-mono text-chalk/70">
-                    Period {currentPeriod} of 30
+                    Period {currentPeriod} of {TOTAL_PERIODS}
                   </span>
                 </div>
                 <h1 className="text-2xl sm:text-3xl font-bold font-chalk text-chalk">
@@ -274,11 +274,11 @@ export function App() {
                   <ArrowLeft className="w-4 h-4" />
                 </button>
                 <span className="text-xs font-mono font-bold px-2.5 py-1.5 rounded bg-black/50 text-gold border border-gold/30">
-                  {currentPeriod}/30
+                  {currentPeriod}/{TOTAL_PERIODS}
                 </span>
                 <button
                   onClick={handleNext}
-                  disabled={currentPeriod >= 30}
+                  disabled={currentPeriod >= TOTAL_PERIODS}
                   className="p-2 rounded-lg bg-gold hover:bg-gold-light text-wood-dark disabled:opacity-30 font-bold shadow transition-colors"
                   title="Next Period (→)"
                 >
@@ -289,37 +289,29 @@ export function App() {
 
             {/* Core Interactive Activity / Visual by Wing */}
             <div>
-              {currentPeriod >= 1 && currentPeriod <= 4 && (
-                <WingArrival
-                  period={currentPeriod}
-                  onNavigateToPage={goToPeriod}
-                  onOpenDiary={() => setIsDiaryOpen(true)}
-                />
-              )}
-              {currentPeriod >= 5 && currentPeriod <= 8 && (
-                <WingPedagogy period={currentPeriod} />
-              )}
-              {currentPeriod >= 9 && currentPeriod <= 15 && (
-                <WingConcepts period={currentPeriod} />
-              )}
-              {currentPeriod >= 16 && currentPeriod <= 18 && (
-                <WingFSA period={currentPeriod} />
-              )}
-              {currentPeriod >= 19 && currentPeriod <= 22 && (
-                <WingCampusConnect period={currentPeriod} />
-              )}
-              {currentPeriod >= 23 && currentPeriod <= 25 && (
-                <WingStarsRadar period={currentPeriod} />
-              )}
-              {currentPeriod >= 26 && currentPeriod <= 27 && (
-                <WingExams period={currentPeriod} />
-              )}
-              {currentPeriod >= 28 && currentPeriod <= 30 && (
-                <WingReflection
-                  period={currentPeriod}
-                  onReturnToSeat={() => setViewMode('classroom')}
-                />
-              )}
+              {(curPageData?.legacyIds ?? [currentPeriod]).map((lp) => (
+                <div key={lp} className="mb-6 last:mb-0">
+                  {lp >= 1 && lp <= 4 && (
+                    <WingArrival
+                      period={lp}
+                      onNavigateToPage={goToPeriod}
+                      onOpenDiary={() => setIsDiaryOpen(true)}
+                    />
+                  )}
+                  {lp >= 5 && lp <= 8 && <WingPedagogy period={lp} />}
+                  {lp >= 9 && lp <= 15 && <WingConcepts period={lp} />}
+                  {lp >= 16 && lp <= 17 && <WingFSA period={lp} />}
+                  {lp >= 19 && lp <= 22 && <WingCampusConnect period={lp} />}
+                  {lp >= 23 && lp <= 25 && <WingStarsRadar period={lp} />}
+                  {lp >= 26 && lp <= 27 && <WingExams period={lp} />}
+                  {lp >= 28 && lp <= 30 && (
+                    <WingReflection
+                      period={lp}
+                      onReturnToSeat={() => setViewMode('classroom')}
+                    />
+                  )}
+                </div>
+              ))}
             </div>
 
             {/* Bottom Content Narrative & My Takeaway Note */}
